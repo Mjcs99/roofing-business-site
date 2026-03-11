@@ -33,7 +33,7 @@ export default function Navbar() {
         </nav>
 
         <div className="nav-actions">
-          <a href="tel:+10000000000" className="nav-phone">
+          <a href="tel:+14035972710" className="nav-phone">
             (403) 597-2710
           </a>
           <a href="/contact" className="nav-cta">
