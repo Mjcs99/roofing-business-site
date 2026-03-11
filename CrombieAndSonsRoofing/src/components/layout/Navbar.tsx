@@ -24,8 +24,8 @@ export default function Navbar() {
           <a href="#about" className="nav-link">
             About
           </a>
-          <a href="#gallery" className="nav-link">
-            Our Work
+          <a href="/financing" className="nav-link">
+            Financing
           </a>
           <a href="/contact" className="nav-link">
             Contact
