@@ -259,10 +259,10 @@ export default function ServicesPage() {
             </div>
 
             <div className="services-cta-actions">
-              <a href="tel:+10000000000" className="btn btn-primary">
+              <a href="tel:+14035972710" className="btn btn-primary">
                 Call Now
               </a>
-              <a href="mailto:info@roofingcompany.com" className="btn btn-outline-dark">
+              <a href="mailto:crombieandsonsroofing@outlook.com" className="btn btn-outline-dark">
                 Email Us
               </a>
             </div>

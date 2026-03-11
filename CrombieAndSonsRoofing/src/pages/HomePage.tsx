@@ -63,7 +63,7 @@ export default function HomePage() {
           <div className="about-panel">
             <div className="stat-card">
               <span className="stat-number">10+</span>
-              <span className="stat-label">Years of Combined Experience</span>
+              <span className="stat-label">Years of Experience</span>
             </div>
             <div className="stat-card">
               <span className="stat-number">100%</span>
@@ -172,10 +172,10 @@ export default function HomePage() {
           </div>
 
           <div className="cta-actions">
-            <a href="tel:+10000000000" className="btn btn-primary">
+            <a href="tel:+14035972710" className="btn btn-primary">
               Call Now
             </a>
-            <a href="mailto:info@roofingcompany.com" className="btn btn-secondary">
+            <a href="mailto:crombieandsonsroofing@outlook.com" className="btn btn-secondary">
               Email Us
             </a>
           </div>

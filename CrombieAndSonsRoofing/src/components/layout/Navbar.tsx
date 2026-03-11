@@ -20,12 +20,12 @@ export default function Navbar() {
           <img
             className="nav-logo-img"
             src={logo}
-            alt="Crombie & Sons Roofing and Exteriors"
+            alt="Crombie & Sons Roofing"
           />
 
           <div className="nav-logo-text">
             <span className="nav-logo-title">Crombie & Sons</span>
-            <span className="nav-logo-subtitle">Roofing and Exteriors</span>
+            <span className="nav-logo-subtitle">Roofing</span>
           </div>
         </a>
 
