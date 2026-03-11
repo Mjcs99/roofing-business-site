@@ -146,7 +146,53 @@
     min-height: 74px;
   }
 }
+@media (max-width: 700px) {
+  .site-header {
+    overflow: hidden;
+  }
 
+  .nav-container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    gap: 0.75rem;
+    padding-inline: 0;
+  }
+
+  .nav-logo {
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .nav-logo-img {
+    height: 72px;
+    max-width: 120px;
+    width: auto;
+    object-fit: contain;
+    transform: none;
+  }
+
+  .nav-logo-text {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .nav-logo-title,
+  .nav-logo-subtitle {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .nav-actions {
+    min-width: 0;
+  }
+
+  .nav-cta {
+    padding: 0.7rem 0.95rem;
+  }
+}
 @media (max-width: 560px) {
   .nav-logo-title {
     font-size: 0.92rem;
