@@ -7,8 +7,6 @@ export default function ContactPage() {
   //const [sent, setSent] = useState(false);
   //const [loading, setLoading] = useState(false);
 
-  const sendEmail = () => {};
-
   return (
     <main className="contact-page">
       <section className="contact-hero">
@@ -41,7 +39,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <form ref={form} onSubmit={sendEmail} className="contact-form">
+          <form ref={form} className="contact-form" name="contact" method="POST" data-netlify="true">
 
             <label>Name</label>
             <input
