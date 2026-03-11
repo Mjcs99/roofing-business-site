@@ -33,8 +33,6 @@ export default function Navbar() {
           <a href="/" className="nav-link">Home</a>
           <a href="/services" className="nav-link">Services</a>
           <a href="/financing" className="nav-link">Financing</a>
-          <a href="#about" className="nav-link">About</a>
-          <a href="#gallery" className="nav-link">Our Work</a>
           <a href="/contact" className="nav-link">Contact</a>
         </nav>
 
@@ -65,8 +63,6 @@ export default function Navbar() {
             <a href="/" className="mobile-nav-link" onClick={closeMenu}>Home</a>
             <a href="/services" className="mobile-nav-link" onClick={closeMenu}>Services</a>
             <a href="/financing" className="mobile-nav-link" onClick={closeMenu}>Financing</a>
-            <a href="#about" className="mobile-nav-link" onClick={closeMenu}>About</a>
-            <a href="#gallery" className="mobile-nav-link" onClick={closeMenu}>Our Work</a>
             <a href="/contact" className="mobile-nav-link" onClick={closeMenu}>Contact</a>
 
             <div className="mobile-menu-footer">
