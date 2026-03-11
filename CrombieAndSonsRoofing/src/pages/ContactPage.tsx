@@ -115,7 +115,7 @@ export default function ContactPage() {
               required
               placeholder="Tell us about your project..."
             />
-            <button className="btn btn-primary">"Send Message"</button>
+            <button className="btn btn-primary">Send Message</button>
             {/*
             <button className="btn btn-primary" disabled={loading}>
               {loading ? "Sending..." : "Send Message"}
