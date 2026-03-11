@@ -4,10 +4,9 @@ import "./ContactPage.css";
 
 export default function ContactPage() {
   const form = useRef<HTMLFormElement>(null);
-  const [sent, setSent] = useState(false);
-  const [loading, setLoading] = useState(false);
-  setSent(false);
-  setLoading(false);
+  //const [sent, setSent] = useState(false);
+  //const [loading, setLoading] = useState(false);
+
   const sendEmail = () => {};
 
   return (
@@ -117,6 +116,7 @@ export default function ContactPage() {
               placeholder="Tell us about your project..."
             />
 
+            {/*
             <button className="btn btn-primary" disabled={loading}>
               {loading ? "Sending..." : "Send Message"}
             </button>
@@ -126,6 +126,7 @@ export default function ContactPage() {
                 Thanks! Your message has been sent.
               </p>
             )}
+            */}
 
           </form>
         </div>
