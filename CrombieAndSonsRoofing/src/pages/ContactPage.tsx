@@ -6,7 +6,8 @@ export default function ContactPage() {
   const form = useRef<HTMLFormElement>(null);
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
-
+  setSent(false);
+  setLoading(false);
   const sendEmail = () => {};
 
   return (
