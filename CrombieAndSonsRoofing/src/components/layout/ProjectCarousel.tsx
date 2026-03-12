@@ -20,8 +20,8 @@ const images = [
   {
     src: roof3,
     alt: "Roof repair project",
-    title: "Storm Damage Repair",
-    description: "Repair work after hail and wind damage."
+    title: "Roof Maintenance",
+    description: "Preventative maintenance to extend the life of your roof."
   }
 ];
 
