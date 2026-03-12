@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./ContactPage.css";
 import { FaFacebook } from "react-icons/fa";
-
+import { Turnstile } from "@marsidev/react-turnstile";
 
 export default function ContactPage() {
   const [sending, setSending] = useState(false);
@@ -135,9 +135,9 @@ export default function ContactPage() {
               required
               placeholder="Tell us about your project..."
             />
-            <div
-              className="cf-turnstile"
-              data-sitekey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
+            <Turnstile
+              siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
+              onSuccess={(token) => console.log("turnstile token:", token)}
             />
             <button className="btn btn-primary" type="submit">
               {sending ? <div className="spinner"></div> : "Send Message"}
