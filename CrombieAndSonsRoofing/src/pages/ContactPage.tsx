@@ -5,9 +5,16 @@ import { Turnstile } from "@marsidev/react-turnstile";
 
 export default function ContactPage() {
   const [sending, setSending] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState("");
+  const [captchaError, setCaptchaError] = useState("");
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (!captchaToken) {
+      setCaptchaError("Please complete the captcha.");
+      return;
+    }
 
+    setCaptchaError("");
     const form = e.currentTarget;
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
@@ -137,8 +144,14 @@ export default function ContactPage() {
             />
             <Turnstile
               siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
-              onSuccess={(token) => console.log("turnstile token:", token)}
+              onSuccess={(token) => {
+                setCaptchaToken(token);
+                setCaptchaError("");
+              }}
+              onExpire={() => setCaptchaToken("")}
+              onError={() => setCaptchaToken("")}
             />
+            {captchaError && <p className="form-error">{captchaError}</p>}
             <button className="btn btn-primary" type="submit">
               {sending ? <div className="spinner"></div> : "Send Message"}
             </button>
