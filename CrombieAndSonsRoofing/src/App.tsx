@@ -5,6 +5,7 @@ import './App.css'
 import ServicesPage from "./pages/ServicesPage.tsx";
 import FinancingPage from "./pages/FinancingPage.tsx";
 import ContactPage from "./pages/ContactPage.tsx";
+import ThankYouPage from "./pages/ThankYouPage.tsx";
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/financing" element={<FinancingPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/thank-you" element={<ThankYouPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>

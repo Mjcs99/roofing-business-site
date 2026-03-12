@@ -1,28 +1,35 @@
+import { useState } from "react";
 import "./ContactPage.css";
+import { FaFacebook } from "react-icons/fa";
+
 
 export default function ContactPage() {
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  const [sending, setSending] = useState(false);
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     const form = e.currentTarget;
     const formData = new FormData(form);
-
     const data = Object.fromEntries(formData.entries());
 
-    fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then(() => {
-        window.location.href = "/thank-you";
-      })
-      .catch(() => {
-        alert("Failed to send message");
+    setSending(true);
+
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
       });
+
+      window.location.href = "/thank-you";
+    } catch (err) {
+      alert("Failed to send message");
+      setSending(false);
+    }
   }
+  
   return (
     <main className="contact-page">
       <section className="contact-hero">
@@ -52,6 +59,8 @@ export default function ContactPage() {
               <p><strong>Our Email</strong><br /> crombieandsonsroofing@outlook.com</p>
 
               <p><strong>Our Service Area</strong><br /> Red Deer & surrounding areas</p>
+              <p><strong>Feel free to contact us through our social media pages</strong><br /></p>
+              <a href="https://www.facebook.com/crombieandsons"><FaFacebook className="social-icon" size={28} color="#1877f2" /></a>
             </div>
           </div>
 
@@ -129,7 +138,7 @@ export default function ContactPage() {
             />
 
             <button className="btn btn-primary" type="submit">
-              Send Message
+              {sending ? <div className="spinner"></div> : "Send Message"}
             </button>
 
           </form>
