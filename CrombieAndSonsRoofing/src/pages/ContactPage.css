@@ -98,3 +98,7 @@
     transform: rotate(360deg);
   }
 }
+
+.cf-turnstile {
+  margin: 20px 0;
+}

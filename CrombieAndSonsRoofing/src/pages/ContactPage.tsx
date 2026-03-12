@@ -63,7 +63,6 @@ export default function ContactPage() {
               <a href="https://www.facebook.com/crombieandsons"><FaFacebook className="social-icon" size={28} color="#1877f2" /></a>
             </div>
           </div>
-
           <form className="contact-form" onSubmit={handleSubmit}>
 
             <label>Your Name</label>
@@ -136,7 +135,10 @@ export default function ContactPage() {
               required
               placeholder="Tell us about your project..."
             />
-
+            <div
+              className="cf-turnstile"
+              data-sitekey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
+            />
             <button className="btn btn-primary" type="submit">
               {sending ? <div className="spinner"></div> : "Send Message"}
             </button>
