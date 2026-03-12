@@ -13,13 +13,10 @@ app.http('contact', {
     }
 
     return {
+      status: 200,
       jsonBody: {
         ok: true,
-        hasConnectionString: !!process.env.ACS_EMAIL_CONNECTION_STRING,
-        hasSender: !!process.env.ACS_EMAIL_SENDER,
-        hasRecipient: !!process.env.LEAD_NOTIFY_EMAIL,
-        sender: process.env.ACS_EMAIL_SENDER || null,
-        recipient: process.env.LEAD_NOTIFY_EMAIL || null,
+        route: 'contact',
         body
       }
     };
