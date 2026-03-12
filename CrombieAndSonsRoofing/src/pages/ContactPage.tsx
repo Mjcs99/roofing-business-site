@@ -1,6 +1,28 @@
 import "./ContactPage.css";
 
 export default function ContactPage() {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const data = Object.fromEntries(formData.entries());
+
+    fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then(() => {
+        window.location.href = "/thank-you";
+      })
+      .catch(() => {
+        alert("Failed to send message");
+      });
+  }
   return (
     <main className="contact-page">
       <section className="contact-hero">
@@ -33,15 +55,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <form
-            className="contact-form"
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            action="/thank-you"
-          >
-            {/* Required hidden input for Netlify */}
-            <input type="hidden" name="form-name" value="contact" />
+          <form className="contact-form" onSubmit={handleSubmit}>
 
             <label>Your Name</label>
             <input
@@ -117,6 +131,7 @@ export default function ContactPage() {
             <button className="btn btn-primary" type="submit">
               Send Message
             </button>
+
           </form>
         </div>
       </section>
