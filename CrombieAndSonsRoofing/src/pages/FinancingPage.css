@@ -9,7 +9,7 @@
   align-items: center;
   background:
     linear-gradient(rgba(15, 23, 42, 0.52), rgba(15, 23, 42, 0.68)),
-    url("../assets/financing.jpg")
+    url("../assets/financing.png")
       center/cover no-repeat;
   color: var(--white);
 }

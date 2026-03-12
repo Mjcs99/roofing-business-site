@@ -1,3 +1,4 @@
+import Action from "../components/layout/Action";
 import "./FinancingPage.css";
 
 export default function FinancingPage() {
@@ -161,30 +162,7 @@ export default function FinancingPage() {
       </section>
 
       <section className="section section-light">
-        <div className="container financing-cta-box">
-          <div>
-            <p className="section-label">Ready To Get Started?</p>
-            <h2>Apply for financing today</h2>
-            <p>
-              Use our secure online application to review available options and
-              take the next step toward your roofing project.
-            </p>
-          </div>
-
-          <div className="financing-cta-actions">
-            <a
-              href="https://YOUR-FINANCING-LINK-HERE.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary"
-            >
-              Apply For Financing
-            </a>
-            <a href="/contact" className="btn btn-outline-dark">
-              Contact Us
-            </a>
-          </div>
-        </div>
+        <Action buttons={[{buttonText: "Apply For Financing", buttonRef: "ref"}, {buttonText: "Contact Us", buttonRef: "/contact"}]} prompt="Ready to get started?" header="Apply for financing today" directive="Use our secure online application to review available options and take the next step toward your roofing project."/>
       </section>
     </main>
   );

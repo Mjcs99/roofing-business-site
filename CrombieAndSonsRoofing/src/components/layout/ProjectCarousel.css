@@ -1,85 +1,43 @@
-.project-carousel {
+.project-gallery {
   display: grid;
-  grid-template-columns: 60px 1fr 60px;
-  align-items: center;
-  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+
+  margin: 40px 10px 0 10px;
 }
 
-.carousel-content {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 24px;
+.gallery-card {
   overflow: hidden;
-  box-shadow: var(--shadow);
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
-.carousel-image-wrap {
+.gallery-image {
   width: 100%;
-  height: 420px;
-  overflow: hidden;
-}
-
-.carousel-image {
-  width: 100%;
-  height: 100%;
+  height: 260px;
   object-fit: cover;
   display: block;
 }
 
-.carousel-caption {
-  padding: 1.5rem;
+.gallery-caption {
+  padding: 18px;
 }
 
-.carousel-caption h3 {
-  margin: 0 0 0.5rem;
+.gallery-caption h3 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
 }
 
-.carousel-caption p {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.7;
+.gallery-caption p {
+  font-size: 0.95rem;
+  color: #666;
 }
 
-.carousel-arrow {
-  width: 60px;
-  height: 60px;
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  background: var(--white);
-  font-size: 2rem;
-  cursor: pointer;
-  box-shadow: var(--shadow);
-}
-
-.carousel-dots {
-  display: flex;
-  gap: 0.6rem;
-  padding: 0 1.5rem 1.5rem;
-}
-
-.carousel-dot {
-  width: 10px;
-  height: 10px;
-  border: none;
-  border-radius: 50%;
-  background: #cfd6de;
-  cursor: pointer;
-}
-
-.carousel-dot.active {
-  background: var(--primary);
-}
-
-@media (max-width: 700px) {
-  .project-carousel {
-    grid-template-columns: 1fr;
-  }
-
-  .carousel-arrow {
-    display: none;
-  }
-
-  .carousel-image-wrap {
-    height: 260px;
+@media (max-width: 900px) {
+  .project-gallery {
+    display: flex;
+    flex-direction: column;
   }
 }
+

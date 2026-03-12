@@ -90,7 +90,7 @@ a {
   align-items: center;
   background:
     linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.6)),
-    url("../assets/roof-photo.jpeg")
+    url("../assets/roof-photo.png")
     center/cover no-repeat;
   color: var(--white);
 }
@@ -366,6 +366,54 @@ a {
 
 .cta .btn-secondary {
   border-color: rgba(255, 255, 255, 0.3);
+}
+
+.safety-hero {
+  position: relative;
+  background-image: url("/safety-roofing.png"); 
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0;
+  color: white;
+}
+
+.safety-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.safety-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.safety-content h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+.safety-text {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+}
+
+.safety-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.safety-point h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.safety-point p {
+  font-size: 0.95rem;
+  opacity: 0.9;
 }
 
 @media (max-width: 1000px) {

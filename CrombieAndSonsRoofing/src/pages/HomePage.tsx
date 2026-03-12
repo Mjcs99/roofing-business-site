@@ -1,3 +1,4 @@
+import Action from "../components/layout/Action";
 import ProjectCarousel from "../components/layout/ProjectCarousel";
 import "./HomePage.css";
 
@@ -30,15 +31,24 @@ export default function HomePage() {
         <div className="container trust-grid">
           <div className="trust-card">
             <h3>Experienced Team</h3>
-            <p>Professional roofing work backed by skill, care, and attention to detail.</p>
+            <p>
+              Professional roofing work backed by skill, care, and attention to
+              detail.
+            </p>
           </div>
           <div className="trust-card">
             <h3>High-Quality Materials</h3>
-            <p>We use dependable materials designed for long-term protection and performance.</p>
+            <p>
+              We use dependable materials designed for long-term protection and
+              performance.
+            </p>
           </div>
           <div className="trust-card">
             <h3>Honest Service</h3>
-            <p>Clear communication, fair pricing, and no surprises from start to finish.</p>
+            <p>
+              Clear communication, fair pricing, and no surprises from start to
+              finish.
+            </p>
           </div>
         </div>
       </section>
@@ -67,7 +77,9 @@ export default function HomePage() {
             </div>
             <div className="stat-card">
               <span className="stat-number">100%</span>
-              <span className="stat-label">Commitment to Customer Satisfaction</span>
+              <span className="stat-label">
+                Commitment to Customer Satisfaction
+              </span>
             </div>
           </div>
         </div>
@@ -79,7 +91,8 @@ export default function HomePage() {
             <p className="section-label">Our Services</p>
             <h2>Professional roofing solutions</h2>
             <p>
-              Tailored services for homeowners, property managers, and businesses.
+              Tailored services for homeowners, property managers, and
+              businesses.
             </p>
           </div>
 
@@ -87,8 +100,8 @@ export default function HomePage() {
             <article className="service-card">
               <h3>Roof Repairs</h3>
               <p>
-                Fast, dependable repairs for leaks, storm damage, missing shingles,
-                and general wear.
+                Fast, dependable repairs for leaks, storm damage, missing
+                shingles, and general wear.
               </p>
             </article>
 
@@ -103,8 +116,8 @@ export default function HomePage() {
             <article className="service-card">
               <h3>Inspections</h3>
               <p>
-                Thorough roof inspections to catch issues early and help you plan
-                the next step.
+                Thorough roof inspections to catch issues early and help you
+                plan the next step.
               </p>
             </article>
 
@@ -120,12 +133,9 @@ export default function HomePage() {
       </section>
 
       <section id="gallery" className="gallery section">
-        <ProjectCarousel/>
+        <ProjectCarousel />
 
-          <p className="gallery-note">
-           
-          </p>
-        
+        <p className="gallery-note"></p>
       </section>
 
       <section className="why-us section section-light">
@@ -139,47 +149,76 @@ export default function HomePage() {
             <div className="why-card">
               <h3>Professional Appearance</h3>
               <p>
-                We treat every property with respect and keep the job site as clean
-                as possible.
+                We treat every property with respect and keep the job site as
+                clean as possible.
               </p>
             </div>
             <div className="why-card">
               <h3>Clear Communication</h3>
               <p>
-                We keep you informed throughout the process so you know exactly what
-                to expect.
+                We keep you informed throughout the process so you know exactly
+                what to expect.
               </p>
             </div>
             <div className="why-card">
               <h3>Built to Last</h3>
               <p>
-                We focus on workmanship and materials that give your roof lasting
-                protection.
+                We focus on workmanship and materials that give your roof
+                lasting protection.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="contact" className="cta">
-        <div className="container cta-box">
-          <div>
-            <p className="section-label">Get Started</p>
-            <h2>Need roofing work done?</h2>
-            <p>
-              Contact us today for a free estimate and let’s talk about your project.
-            </p>
-          </div>
+      <section className="safety-hero">
+        <div className="safety-overlay" />
 
-          <div className="cta-actions">
-            <a href="tel:+14035972710" className="btn btn-primary">
-              Call Now
-            </a>
-            <a href="mailto:crombieandsonsroofing@outlook.com" className="btn btn-secondary">
-              Email Us
-            </a>
-          </div>
-        </div>
+            <div className="container safety-content">
+                <p className="section-label">Our Commitment to Safety</p>
+                <h2>Safety comes first on every project</h2>
+
+                <p className="safety-text">
+                We take safety seriously for our crew, our customers, and your property.
+                Every project is approached with careful planning, responsible work
+                practices, and respect for the homes and businesses we work on.
+                </p>
+
+                <div className="safety-points">
+                <div className="safety-point">
+                    <h3>Careful Job Site Practices</h3>
+                    <p>Organized work areas and disciplined site procedures.</p>
+                </div>
+
+                <div className="safety-point">
+                    <h3>Protection for Your Property</h3>
+                    <p>We work carefully around landscaping, siding, and surrounding areas.</p>
+                </div>
+
+                <div className="safety-point">
+                    <h3>Professional Workmanship</h3>
+                    <p>Our team approaches every project responsibly and with attention to detail.</p>
+                </div>
+                </div>
+            </div>
+        </section>
+
+      <section id="contact" className="cta">
+        <Action
+          buttons={[
+            {
+              buttonText: "Email us",
+              buttonRef: "mailto:crombieandsonsroofing@outlook.com",
+            },
+            {
+              buttonText: "Call Now",
+              buttonRef: "tel:+14035972710",
+            },
+          ]}
+          prompt="Ready to get started?"
+          header="Need roofing work done?"
+          directive="Contact us today for a free estimate and let’s talk about your project."
+        />
       </section>
     </main>
   );
