@@ -1,3 +1,4 @@
+import Footer from "../components/layout/Footer";
 import "./ServicesPage.css";
 
 export default function ServicesPage() {
@@ -247,27 +248,7 @@ export default function ServicesPage() {
         </div>
       </section>
       <section className="section section-light">
-        <div className="container">
-          <div className="services-cta-box">
-            <div>
-              <p className="section-label">Get Started</p>
-              <h2>Need roofing or exterior work done?</h2>
-              <p>
-                Reach out today for a free estimate and let’s talk about your
-                project.
-              </p>
-            </div>
-
-            <div className="services-cta-actions">
-              <a href="tel:+14035972710" className="btn btn-primary">
-                Call Now
-              </a>
-              <a href="mailto:crombieandsonsroofing@outlook.com" className="btn btn-outline-dark">
-                Email Us
-              </a>
-            </div>
-          </div>
-        </div>
+        <Footer/>
       </section>
     </main>
   );

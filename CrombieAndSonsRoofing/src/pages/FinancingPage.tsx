@@ -1,4 +1,5 @@
-import Action from "../components/layout/Action";
+import Footer from "../components/layout/Footer";
+import Action from "../components/layout/Footer";
 import "./FinancingPage.css";
 
 export default function FinancingPage() {
@@ -162,7 +163,7 @@ export default function FinancingPage() {
       </section>
 
       <section className="section section-light">
-        <Action buttons={[{buttonText: "Apply For Financing", buttonRef: "ref"}, {buttonText: "Contact Us", buttonRef: "/contact"}]} prompt="Ready to get started?" header="Apply for financing today" directive="Use our secure online application to review available options and take the next step toward your roofing project."/>
+        <Footer/>
       </section>
     </main>
   );

@@ -1,4 +1,5 @@
-import Action from "../components/layout/Action";
+import Footer from "../components/layout/Footer";
+import Action from "../components/layout/Footer";
 import ProjectCarousel from "../components/layout/ProjectCarousel";
 import "./HomePage.css";
 
@@ -204,21 +205,7 @@ export default function HomePage() {
         </section>
 
       <section id="contact" className="cta">
-        <Action
-          buttons={[
-            {
-              buttonText: "Email us",
-              buttonRef: "mailto:crombieandsonsroofing@outlook.com",
-            },
-            {
-              buttonText: "Call Now",
-              buttonRef: "tel:+14035972710",
-            },
-          ]}
-          prompt="Ready to get started?"
-          header="Need roofing work done?"
-          directive="Contact us today for a free estimate and let’s talk about your project."
-        />
+        <Footer />
       </section>
     </main>
   );

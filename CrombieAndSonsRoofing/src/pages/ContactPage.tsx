@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./ContactPage.css";
 import { FaFacebook } from "react-icons/fa";
 import { Turnstile } from "@marsidev/react-turnstile";
+import Footer from "../components/layout/Footer";
 
 export default function ContactPage() {
   const [sending, setSending] = useState(false);
@@ -159,6 +160,7 @@ export default function ContactPage() {
           </form>
         </div>
       </section>
+      <Footer/>
     </main>
   );
 }
