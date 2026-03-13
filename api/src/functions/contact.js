@@ -63,7 +63,6 @@ app.http("contact", {
       const connectionString = process.env.ACS_EMAIL_CONNECTION_STRING;
       const senderAddress = process.env.ACS_EMAIL_SENDER;
       const notifyAddress = process.env.LEAD_NOTIFY_EMAIL;
-      const  notifyNumber = "4035508231@txt.bell.ca"
       const client = new EmailClient(connectionString);
 
       const emailMessage = {
@@ -82,7 +81,7 @@ Message:
 ${message}`,
         },
         recipients: {
-          to: [{ address: notifyAddress }, {address: notifyNumber}],
+          to: [{ address: notifyAddress }],
         },
       };
 
