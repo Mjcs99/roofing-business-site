@@ -1,5 +1,4 @@
 import Footer from "../components/layout/Footer";
-import Action from "../components/layout/Footer";
 import ProjectCarousel from "../components/layout/ProjectCarousel";
 import "./HomePage.css";
 
