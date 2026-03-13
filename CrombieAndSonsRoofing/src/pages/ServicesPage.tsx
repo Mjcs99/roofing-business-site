@@ -247,9 +247,7 @@ export default function ServicesPage() {
 
         </div>
       </section>
-      <section className="section section-light">
-        <Footer/>
-      </section>
+      <Footer/>
     </main>
   );
 }

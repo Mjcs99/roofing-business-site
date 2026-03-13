@@ -161,10 +161,8 @@ export default function FinancingPage() {
           </div>
         </div>
       </section>
-
-      <section className="section section-light">
-        <Footer/>
-      </section>
+      <Footer/>
+    
     </main>
   );
 }

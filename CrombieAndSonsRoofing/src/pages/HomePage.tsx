@@ -203,10 +203,7 @@ export default function HomePage() {
                 </div>
             </div>
         </section>
-
-      <section id="contact" className="cta">
-        <Footer />
-      </section>
+      <Footer />
     </main>
   );
 }
