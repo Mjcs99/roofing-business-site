@@ -90,7 +90,7 @@ a {
   align-items: center;
   background:
     linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.6)),
-    url("../assets/roof-photo.png")
+    url("../assets/roof-photo.webp")
     center/cover no-repeat;
   color: var(--white);
 }
