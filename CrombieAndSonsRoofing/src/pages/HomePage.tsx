@@ -1,3 +1,4 @@
+import ScrollReveal from "../components/animations/ScrollReveal";
 import Footer from "../components/layout/Footer";
 import ProjectCarousel from "../components/layout/ProjectCarousel";
 import "./HomePage.css";
@@ -5,9 +6,12 @@ import "./HomePage.css";
 export default function HomePage() {
   return (
     <main className="home-page">
+      
       <section className="hero">
+        
         <div className="hero-overlay" />
         <div className="hero-content container">
+        <ScrollReveal y={0} x={-50} delay={0.4}>
           <p className="eyebrow">Trusted Roofing & Exterior Services</p>
           <h1>Protecting Homes With Quality Craftsmanship</h1>
           <p className="hero-text">
@@ -24,9 +28,11 @@ export default function HomePage() {
               View Services
             </a>
           </div>
+        </ScrollReveal>
         </div>
+        
       </section>
-
+        
       <section className="trust-bar">
         <div className="container trust-grid">
           <div className="trust-card">
