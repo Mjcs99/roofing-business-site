@@ -1,6 +1,6 @@
 import Footer from "../components/layout/Footer";
 import "./ServicesPage.css";
-import hero from "../assets/services.png"
+import hero from "../assets/roofing-services.webp"
 import ScrollReveal from "../components/animations/ScrollReveal";
 import asphalt from "../assets/services_photos/asphalt-roofing-system.webp"
 import metal from "../assets/services_photos/metal-roofing-system.webp"
