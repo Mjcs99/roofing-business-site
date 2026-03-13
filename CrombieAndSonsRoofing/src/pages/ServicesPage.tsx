@@ -1,150 +1,370 @@
 import Footer from "../components/layout/Footer";
 import "./ServicesPage.css";
+import hero from "../assets/services.png"
+import ScrollReveal from "../components/animations/ScrollReveal";
+import asphalt from "../assets/services_photos/asphalt-roofing-system.png"
+import metal from "../assets/services_photos/metal-roofing-system.png"
+import cedar from "../assets/services_photos/cedar-shake-cleaning.jpg"
+import gutter from "../assets/services_photos/gutter.jpg"
+import siding from "../assets/services_photos/vinyl-siding-repairs.png"
+import rubber from "../assets/services_photos/rubber-roofing-system.png"
+import soffit from "../assets/services_photos/soffit-fascia-replacement.png"
+import repairs from "../assets/services_photos/emergency-leaks-repairs.png"
+import sidingCleaning from "../assets/services_photos/siding-cleaning.png"
+import roofCleaning from "../assets/services_photos/roof-cleaning.png"
+const serviceImages = {
+  hero,
+  asphalt,
+  metal,
+  rubber,
+  siding,
+  soffit,
+  repairs,
+  cedar,
+  gutter,
+  sidingCleaning,
+  roofCleaning,
+};
 
 export default function ServicesPage() {
   return (
     <main className="services-page">
-      <section className="services-hero">
-        <div className="services-hero-overlay" />
+      <section
+        className="services-hero"
+        style={{
+          backgroundImage: `linear-gradient(rgba(10, 18, 32, 0.72), rgba(10, 18, 32, 0.78)), url(${serviceImages.hero})`
+        }}
+      >
+        <ScrollReveal x={50} y={0}>
         <div className="container services-hero-content">
-            <p className="services-eyebrow">Our Services</p>
-            <h1>Professional Roofing & Exterior Services</h1>
-            <p className="services-hero-text">
-            We provide dependable roofing and exterior solutions for homeowners
-            and businesses. From repairs and inspections to full replacements,
-            our focus is clean workmanship, honest communication, and durable
-            results.
-            </p>
+          <p className="services-eyebrow">Our Services</p>
+          <h1>Roofing & Exterior Services Built for Alberta Homes</h1>
+          <p className="services-hero-text">
+            We provide asphalt roofing, Prolok and Duraclad metal roofing systems,
+            rubber roofing, vinyl siding repairs, soffit and fascia work, emergency
+            leak repairs, and exterior cleaning services to help protect your home
+            and keep it looking its best.
+          </p>
 
-            <div className="services-hero-actions">
-            <a href="/financing" className="btn btn-primary">
-                Explore Financing
+          <div className="services-hero-actions">
+            <a href="/contact" className="btn btn-primary">
+              Get a Free Estimate
             </a>
-            <a href="/contact" className="btn btn-secondary">
-                Get a Free Estimate
+            <a href="/financing" className="btn btn-secondary">
+              Explore Financing
             </a>
-            </div>
+          </div>
 
-            <div className="hero-financing-card">
-            <span className="hero-financing-label">Financing Available</span>
-            <h3>Roof replacement from $129/month*</h3>
-            <p>
-                Affordable payment options available through our financing partner.
-                Apply online quickly and securely.
-            </p>
+          
+        </div>
+        </ScrollReveal>
+      </section>
 
-            <div className="hero-financing-actions">
-                <a
-                href="https://YOUR-FINANCING-LINK-HERE.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hero-financing-link"
-                >
-                Apply Now
+      <section className="services-anchor-nav section">
+        
+        <div className="container">
+          <div className="services-anchor-nav-card">
+            <p className="section-label">Browse Services</p>
+            <h2>Jump to the section you want</h2>
+            <ScrollReveal x={-50} y={0}>
+            <div className="services-anchor-links">
+                <a href="#main-services" className="services-anchor-link">
+                Main Services
+                </a>
+                <a href="#roofing-options" className="services-anchor-link">
+                Roofing Options
+                </a>
+                <a href="#how-to-choose" className="services-anchor-link">
+                How To Choose
+                </a>
+                <a href="#featured-services" className="services-anchor-link">
+                Featured Services
+                </a>
+                <a href="#cleaning-services" className="services-anchor-link">
+                Cleaning Services
+                </a>
+                <a href="#project-gallery" className="services-anchor-link">
+                Project Gallery
+                </a>
+                <a href="#our-process" className="services-anchor-link">
+                Our Process
+                </a>
+                <a href="#financing" className="services-anchor-link">
+                Financing
                 </a>
             </div>
-
-            <span className="hero-financing-disclaimer">
-                *Subject to approval. Terms and monthly payments vary.
-            </span>
-            </div>
+            </ScrollReveal>
+          </div>
         </div>
-        </section>
+       
+      </section>
+      
+      <section className="section material-comparison-section">
+        <ScrollReveal  y={40} delay={0.4}>
+        <div className="container">
+          <div className="section-header">
+            
+                <p className="section-label">Roofing Options</p>
+                <h2>Asphalt vs rubber vs metal: which roofing system is right for your home?</h2>
+                <p>
+                The best material depends on your roof design, budget, long-term goals,
+                and how you want the finished result to look and perform.
+                </p>
+            
+          </div>
+            
+          <div className="comparison-grid comparison-grid-three">
+            <article className="comparison-card">
+              <h3>Asphalt Roofing</h3>
+              <ul>
+                <li>Lower upfront cost</li>
+                <li>Popular residential roofing choice</li>
+                <li>Works well on many sloped roofs</li>
+                <li>Available in many colours and styles</li>
+                <li>Great balance of appearance and affordability</li>
+              </ul>
+              <p>
+                Asphalt is often the best choice for homeowners who want dependable
+                protection, proven performance, and a more budget-friendly replacement.
+              </p>
+            </article>
 
-      <section className="services-intro section">
-        <div className="container services-intro-grid">
-          <div>
-            <p className="section-label">What We Do</p>
-            <h2>Built to protect your property</h2>
+            <article className="comparison-card comparison-card-featured">
+              <h3>Rubber Roofing</h3>
+              <ul>
+                <li>Great for low-slope and flat roof sections</li>
+                <li>Strong waterproofing performance</li>
+                <li>Durable and practical</li>
+                <li>Good for garages, additions, and porch roofs</li>
+                <li>Smart where drainage matters most</li>
+              </ul>
+              <p>
+                Rubber roofing is a strong choice when your home has flat or low-slope
+                areas and you need a material built to manage water reliably.
+              </p>
+            </article>
+
+            <article className="comparison-card">
+              <h3>Metal Roofing</h3>
+              <ul>
+                <li>Longer lifespan</li>
+                <li>Premium appearance</li>
+                <li>Excellent durability in harsh weather</li>
+                <li>Lower maintenance over time</li>
+                <li>Strong long-term value</li>
+              </ul>
+              <p>
+                Metal is a great fit for homeowners who want to invest more upfront for
+                long-term durability, premium performance, and a cleaner finished look.
+              </p>
+            </article>
+          </div>
+
+          <div className="system-comparison-grid">
+            <article className="system-card">
+              <img src={serviceImages.asphalt} alt="Asphalt roofing installation" />
+              <div className="system-card-content">
+                <h3>When asphalt makes sense</h3>
+                <p>
+                  Asphalt is ideal when you want a reliable roofing system with strong
+                  curb appeal and a more affordable upfront cost for a standard sloped roof.
+                </p>
+              </div>
+            </article>
+
+            <article className="system-card">
+              <img src={serviceImages.rubber} alt="Rubber roofing installation" />
+              <div className="system-card-content">
+                <h3>When rubber makes sense</h3>
+                <p>
+                  Rubber is a smart solution for flat or low-slope roof areas where
+                  waterproofing, drainage, and durability are especially important.
+                </p>
+              </div>
+            </article>
+
+            <article className="system-card">
+              <img src={serviceImages.metal} alt="Metal roofing installation" />
+              <div className="system-card-content">
+                <h3>When metal makes sense</h3>
+                <p>
+                  Metal is the better choice when you want long-term value, premium
+                  appearance, and a highly durable system built for the long haul.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+        </ScrollReveal>
+      </section>
+      <ScrollReveal y={40} delay={0.5}>
+      <section className="section section-light">
+        <div className="container">
+            
+          <div className="section-header">
+            
+            <p className="section-label">How To Choose</p>
+            <h2>Which roofing material should you choose?</h2>
+          </div>
+            
+          <div className="service-detail-grid">
+            <article className="service-detail-card">
+              <div className="service-icon">A</div>
+              <h3>Choose Asphalt If...</h3>
+              <p>
+                You want a dependable, attractive roofing system with a lower upfront
+                cost and a proven fit for standard residential sloped roofs.
+              </p>
+            </article>
+
+            <article className="service-detail-card">
+              <div className="service-icon">R</div>
+              <h3>Choose Rubber If...</h3>
+              <p>
+                You have a flat or low-slope area and want a roofing material designed
+                for strong waterproofing performance and practical durability.
+              </p>
+            </article>
+
+            <article className="service-detail-card">
+              <div className="service-icon">M</div>
+              <h3>Choose Metal If...</h3>
+              <p>
+                You want a premium look, longer lifespan, and stronger long-term value,
+                and you are comfortable with a higher upfront investment.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      </ScrollReveal>
+      <section className="section service-showcase">
+        <div className="container">
+          <div className="section-header">
+            <p className="section-label">Featured Services</p>
+            <h2>See the kinds of work we do</h2>
             <p>
-              Whether you need a quick repair after a storm or a full roof
-              replacement, we approach every project with care and professionalism.
-              We work to keep your home protected, improve curb appeal, and
-              deliver results that last.
+              Replace these placeholder images with your own project photos later.
             </p>
           </div>
 
-          <div className="services-highlight-card">
-            <h3>Why homeowners choose us</h3>
-            <ul>
-              <li>Quality workmanship</li>
-              <li>Reliable communication</li>
-              <li>Professional job site cleanup</li>
-              <li>Durable roofing materials</li>
-            </ul>
+          <div className="featured-service-row">
+            <div className="featured-service-image">
+              <img src={serviceImages.siding} alt="Vinyl siding and exterior repairs" />
+            </div>
+            <div className="featured-service-content">
+              <h3>Vinyl siding & repairs</h3>
+              <p>
+                Siding does more than improve how your home looks. It also helps protect
+                the structure from the elements. Repairing damaged siding or updating worn
+                exterior finishes can improve curb appeal while helping the home stay better
+                sealed and protected.
+              </p>
+              <ul>
+                <li>Replace cracked or damaged panels</li>
+                <li>Improve exterior appearance</li>
+                <li>Help protect against moisture and weather exposure</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="featured-service-row featured-service-row-reverse">
+            <div className="featured-service-image">
+              <img src={serviceImages.soffit} alt="Soffit and fascia installation" />
+            </div>
+            <div className="featured-service-content">
+              <h3>Soffit & fascia replacement</h3>
+              <p>
+                Your roofline needs more than shingles or metal panels to perform properly.
+                Soffit and fascia support ventilation, help manage moisture, and create a
+                clean finished edge around the roof. Replacing worn or damaged pieces can
+                improve both function and appearance.
+              </p>
+              <ul>
+                <li>Better roofline appearance</li>
+                <li>Improved ventilation support</li>
+                <li>Protection against weather-related deterioration</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="featured-service-row">
+            <div className="featured-service-image">
+              <img src={serviceImages.repairs} alt="Emergency roof leak repair" />
+            </div>
+            <div className="featured-service-content">
+              <h3>Emergency leaks & repairs</h3>
+              <p>
+                When water is getting in, speed matters. Fast repairs can help reduce
+                damage to insulation, ceilings, drywall, and interior finishes. We help
+                identify the source and address the issue before it gets worse.
+              </p>
+              <ul>
+                <li>Leak detection and repair</li>
+                <li>Storm and weather-related repairs</li>
+                <li>Prevent bigger damage and higher costs later</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="section section-light">
+      <section className="section section-light cleaning-section">
         <div className="container">
           <div className="section-header">
-            <p className="section-label">Main Services</p>
-            <h2>Roofing solutions you can count on</h2>
+            <ScrollReveal  y={40} delay={0.4}>
+            <p className="section-label">Cleaning Services</p>
+            <h2>Roof, siding, cedar shake, and gutter cleaning</h2>
+            </ScrollReveal>
+            <ScrollReveal  y={0} x={50} delay={0.6}>
             <p>
-              We offer a full range of roofing and exterior services tailored to
-              your needs.
+              Cleaning isn’t just cosmetic. Removing buildup from your roof, siding,
+              cedar shake, and gutters can help maintain the condition and appearance
+              of your property.
             </p>
+            </ScrollReveal>
           </div>
 
-          <div className="service-detail-grid">
-            <article className="service-detail-card">
-              <div className="service-icon">01</div>
-              <h3>Roof Repairs</h3>
-              <p>
-                Fast, dependable repair work for leaks, damaged shingles, flashing
-                issues, and general wear. We identify the problem and fix it
-                properly to help prevent larger issues later.
-              </p>
+          <div className="cleaning-grid">
+            <article className="cleaning-card">
+              <img src={serviceImages.roofCleaning} alt="Roof cleaning service" />
+              <div className="cleaning-card-content">
+                <h3>Roof Cleaning</h3>
+                <p>
+                  Remove debris and buildup that can trap moisture and leave your roof
+                  looking worn before its time.
+                </p>
+              </div>
             </article>
 
-            <article className="service-detail-card">
-              <div className="service-icon">02</div>
-              <h3>Roof Replacements</h3>
-              <p>
-                When a roof has reached the end of its lifespan, we provide full
-                replacement services with quality materials and careful installation
-                for long-term protection and a clean finished look.
-              </p>
+            <article className="cleaning-card">
+              <img src={serviceImages.sidingCleaning} alt="Siding cleaning service" />
+              <div className="cleaning-card-content">
+                <h3>Siding Cleaning</h3>
+                <p>
+                  Refresh the exterior of your home and restore cleaner curb appeal.
+                </p>
+              </div>
             </article>
 
-            <article className="service-detail-card">
-              <div className="service-icon">03</div>
-              <h3>Roof Inspections</h3>
-              <p>
-                Thorough inspections to assess roof condition, spot early warning
-                signs, and help you make informed decisions before small problems
-                become expensive repairs.
-              </p>
+            <article className="cleaning-card">
+              <img src={serviceImages.cedar} alt="Cedar shake cleaning service" />
+              <div className="cleaning-card-content">
+                <h3>Cedar Shake Cleaning</h3>
+                <p>
+                  Help preserve the appearance and condition of cedar by removing surface buildup.
+                </p>
+              </div>
             </article>
 
-            <article className="service-detail-card">
-              <div className="service-icon">04</div>
-              <h3>Storm Damage Repairs</h3>
-              <p>
-                If your roof has been damaged by wind, hail, or severe weather,
-                we can assess the damage and help restore your roof’s integrity
-                quickly and professionally.
-              </p>
-            </article>
-
-            <article className="service-detail-card">
-              <div className="service-icon">05</div>
-              <h3>Shingle Roofing</h3>
-              <p>
-                Asphalt shingle systems remain one of the most popular roofing
-                choices for residential properties because they offer strong
-                protection, affordability, and visual appeal.
-              </p>
-            </article>
-
-            <article className="service-detail-card">
-              <div className="service-icon">06</div>
-              <h3>Exterior Services</h3>
-              <p>
-                We also handle exterior work that complements your roofing system,
-                helping improve both protection and appearance for your property.
-              </p>
+            <article className="cleaning-card">
+              <img src={serviceImages.gutter} alt="Gutter cleaning service" />
+              <div className="cleaning-card-content">
+                <h3>Gutter Cleaning</h3>
+                <p>
+                  Keep water flowing properly and reduce the risk of overflow and drainage issues.
+                </p>
+              </div>
             </article>
           </div>
         </div>
@@ -154,7 +374,7 @@ export default function ServicesPage() {
         <div className="container process-section">
           <div className="section-header">
             <p className="section-label">Our Process</p>
-            <h2>A simple, professional experience</h2>
+            <h2>A simple, professional experience from start to finish</h2>
           </div>
 
           <div className="process-grid">
@@ -162,92 +382,112 @@ export default function ServicesPage() {
               <span className="process-step">Step 1</span>
               <h3>Consultation</h3>
               <p>
-                We learn about your roofing needs and schedule a review of the
-                project.
+                We talk through your project, concerns, goals, and budget.
               </p>
             </div>
 
             <div className="process-card">
               <span className="process-step">Step 2</span>
-              <h3>Inspection & Estimate</h3>
+              <h3>Inspection & Recommendation</h3>
               <p>
-                We assess the work required and provide a clear, straightforward
-                estimate.
+                We assess the condition of the roof or exterior and recommend the most
+                practical option for your property.
               </p>
             </div>
 
             <div className="process-card">
               <span className="process-step">Step 3</span>
-              <h3>Professional Work</h3>
+              <h3>Clear Estimate</h3>
               <p>
-                Our team completes the work with attention to detail, safety, and
-                job site cleanliness.
+                We provide a straightforward quote so you understand the scope of work
+                and available options.
               </p>
             </div>
 
             <div className="process-card">
               <span className="process-step">Step 4</span>
-              <h3>Final Review</h3>
+              <h3>Professional Work & Cleanup</h3>
               <p>
-                We make sure the finished result meets expectations and leaves
-                your property protected.
+                We complete the work with care, communication, and attention to site cleanliness.
               </p>
             </div>
           </div>
         </div>
       </section>
-    <section className="financing section section-light">
-        <div className="container financing-grid">
 
-            <div className="financing-text">
+      <section className="financing section section-light">
+        <div className="container financing-grid">
+          <div className="financing-text">
             <p className="section-label">Financing Available</p>
-            <h2>Affordable payment options for your roofing project</h2>
+            <h2>Make your project easier to start</h2>
 
             <p>
-                Roofing work is an important investment. We offer financing options to
-                help homeowners complete projects without paying the full cost upfront.
+              Roofing and exterior work is an investment in your home. Financing can
+              help you move forward sooner, especially for larger replacement projects
+              or urgent repairs that should not wait.
             </p>
 
             <p>
-                Apply online quickly and securely through our financing partner to see
-                available payment options.
+              Apply online quickly and securely through our financing partner to see
+              available payment options.
             </p>
 
             <div className="financing-actions">
-                <a
+              <a
                 href="https://YOUR-FINANCING-LINK-HERE.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary"
-                >
+              >
                 Apply For Financing
-                </a>
+              </a>
 
-                <a href="#contact" className="btn btn-secondary">
+              <a href="/contact" className="btn btn-secondary">
                 Ask About Financing
-                </a>
+              </a>
             </div>
-            </div>
+          </div>
 
-            <div className="financing-card">
+          <div className="financing-card">
             <h3>Why financing helps</h3>
 
             <ul>
-                <li>Spread payments over time</li>
-                <li>Start your roofing project sooner</li>
-                <li>Flexible approval options</li>
-                <li>Simple online application</li>
+              <li>Start important work sooner</li>
+              <li>Spread payments over time</li>
+              <li>Helpful for full roof replacements</li>
+              <li>Simple online application process</li>
             </ul>
 
             <p className="financing-note">
-                Financing approval and terms are provided by our third-party financing
-                partner.
+              Financing approval and terms are provided by our third-party financing partner.
             </p>
-            </div>
-
+          </div>
         </div>
       </section>
-      <Footer/>
+
+      <section className="section services-cta-section">
+        <div className="container services-cta-card">
+          <ScrollReveal  y={40} delay={0.4}>
+          <p className="section-label">Need Help Deciding?</p>
+          <h2>We can help you choose the right roofing or exterior solution</h2>
+          </ScrollReveal>
+          <ScrollReveal  y={0} x={50} delay={0.6}>
+          <p>
+            Not sure whether asphalt, rubber, or metal is the better fit? Need repairs
+            now but want to plan for a replacement later? We’ll walk you through your
+            options and give you an honest recommendation.
+          </p>
+        
+          <div className="services-cta-actions">
+            <a href="/contact" className="btn btn-primary">
+              Request a Free Estimate
+            </a>
+          </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <Footer />
     </main>
   );
 }

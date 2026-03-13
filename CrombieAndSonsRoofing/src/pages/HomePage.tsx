@@ -73,12 +73,12 @@ export default function HomePage() {
           <div className="about-panel">
             <div className="stat-card">
               <span className="stat-number">10+</span>
-              <span className="stat-label">Years of Experience</span>
+              <span className="stat-label">Years of Experience <br/><strong>serving Red Deer & surrounding areas</strong></span>
             </div>
             <div className="stat-card">
               <span className="stat-number">100%</span>
               <span className="stat-label">
-                Commitment to Customer Satisfaction
+                Commitment to <strong>Customer Satisfaction</strong>
               </span>
             </div>
           </div>
