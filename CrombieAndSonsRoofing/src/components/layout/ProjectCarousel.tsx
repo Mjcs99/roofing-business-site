@@ -1,5 +1,5 @@
 import roof1 from "../../assets/roof-photo.png";
-import roof2 from "../../assets/carousel1.png";
+import roof2 from "../../assets/storm-damage-repair.jpg";
 import roof3 from "../../assets/carousel2.png";
 
 import "./ProjectCarousel.css";

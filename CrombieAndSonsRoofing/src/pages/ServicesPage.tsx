@@ -2,16 +2,17 @@ import Footer from "../components/layout/Footer";
 import "./ServicesPage.css";
 import hero from "../assets/services.png"
 import ScrollReveal from "../components/animations/ScrollReveal";
-import asphalt from "../assets/services_photos/asphalt-roofing-system.png"
-import metal from "../assets/services_photos/metal-roofing-system.png"
+import asphalt from "../assets/services_photos/asphalt-roofing-system.webp"
+import metal from "../assets/services_photos/metal-roofing-system.webp"
 import cedar from "../assets/services_photos/cedar-shake-cleaning.jpg"
 import gutter from "../assets/services_photos/gutter.jpg"
 import siding from "../assets/services_photos/vinyl-siding-repairs.png"
-import rubber from "../assets/services_photos/rubber-roofing-system.png"
+import rubber from "../assets/services_photos/rubber-roofing-system.webp"
 import soffit from "../assets/services_photos/soffit-fascia-replacement.png"
 import repairs from "../assets/services_photos/emergency-leaks-repairs.png"
 import sidingCleaning from "../assets/services_photos/siding-cleaning.png"
 import roofCleaning from "../assets/services_photos/roof-cleaning.png"
+
 const serviceImages = {
   hero,
   asphalt,
