@@ -234,9 +234,6 @@ export default function ServicesPage() {
           <div className="section-header">
             <p className="section-label">Featured Services</p>
             <h2>See the kinds of work we do</h2>
-            <p>
-              Replace these placeholder images with your own project photos later.
-            </p>
           </div>
 
           <div className="featured-service-row">
