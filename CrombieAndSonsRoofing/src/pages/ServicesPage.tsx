@@ -8,10 +8,10 @@ import cedar from "../assets/services_photos/cedar-shake-cleaning.jpg"
 import gutter from "../assets/services_photos/gutter.jpg"
 import siding from "../assets/services_photos/vinyl-siding-repairs.png"
 import rubber from "../assets/services_photos/rubber-roofing-system.webp"
-import soffit from "../assets/services_photos/soffit-fascia-replacement.png"
-import repairs from "../assets/services_photos/emergency-leaks-repairs.png"
-import sidingCleaning from "../assets/services_photos/siding-cleaning.png"
-import roofCleaning from "../assets/services_photos/roof-cleaning.png"
+import soffit from "../assets/services_photos/soffit-fascia-replacement.webp"
+import repairs from "../assets/services_photos/emergency-leaks-repairs.webp"
+import sidingCleaning from "../assets/services_photos/siding-cleaning.webp"
+import roofCleaning from "../assets/services_photos/roof-cleaning.webp"
 
 const serviceImages = {
   hero,
