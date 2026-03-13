@@ -100,7 +100,7 @@ export default function ServicesPage() {
       </section>
       
       <section className="section material-comparison-section">
-        <ScrollReveal  y={40} delay={0.4}>
+        <ScrollReveal  y={40} delay={0.15}>
         <div className="container">
           <div className="section-header">
             
@@ -197,7 +197,7 @@ export default function ServicesPage() {
         </div>
         </ScrollReveal>
       </section>
-      <ScrollReveal y={40} delay={0.5}>
+      <ScrollReveal y={40} delay={0.1}>
       <section className="section section-light">
         <div className="container">
             
@@ -312,11 +312,11 @@ export default function ServicesPage() {
       <section className="section section-light cleaning-section">
         <div className="container">
           <div className="section-header">
-            <ScrollReveal  y={40} delay={0.4}>
+            <ScrollReveal  y={40} delay={0.1}>
             <p className="section-label">Cleaning Services</p>
             <h2>Roof, siding, cedar shake, and gutter cleaning</h2>
             </ScrollReveal>
-            <ScrollReveal  y={0} x={50} delay={0.6}>
+            <ScrollReveal  y={0} x={50} delay={0.2}>
             <p>
               Cleaning isn’t just cosmetic. Removing buildup from your roof, siding,
               cedar shake, and gutters can help maintain the condition and appearance
@@ -467,11 +467,11 @@ export default function ServicesPage() {
 
       <section className="section services-cta-section">
         <div className="container services-cta-card">
-          <ScrollReveal  y={40} delay={0.4}>
+          <ScrollReveal  y={40} delay={0.1}>
           <p className="section-label">Need Help Deciding?</p>
           <h2>We can help you choose the right roofing or exterior solution</h2>
           </ScrollReveal>
-          <ScrollReveal  y={0} x={50} delay={0.6}>
+          <ScrollReveal  y={0} x={50} delay={0.2}>
           <p>
             Not sure whether asphalt, rubber, or metal is the better fit? Need repairs
             now but want to plan for a replacement later? We’ll walk you through your
