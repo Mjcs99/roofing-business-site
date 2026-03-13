@@ -68,9 +68,6 @@ export default function ServicesPage() {
             <h2>Jump to the section you want</h2>
             <ScrollReveal x={-50} y={0}>
             <div className="services-anchor-links">
-                <a href="#main-services" className="services-anchor-link">
-                Main Services
-                </a>
                 <a href="#roofing-options" className="services-anchor-link">
                 Roofing Options
                 </a>
@@ -83,14 +80,8 @@ export default function ServicesPage() {
                 <a href="#cleaning-services" className="services-anchor-link">
                 Cleaning Services
                 </a>
-                <a href="#project-gallery" className="services-anchor-link">
-                Project Gallery
-                </a>
                 <a href="#our-process" className="services-anchor-link">
                 Our Process
-                </a>
-                <a href="#financing" className="services-anchor-link">
-                Financing
                 </a>
             </div>
             </ScrollReveal>
@@ -99,11 +90,10 @@ export default function ServicesPage() {
        
       </section>
       
-      <section className="section material-comparison-section">
+      <section className="section material-comparison-section" id="roofing-options">
         <ScrollReveal  y={40} delay={0.15}>
         <div className="container">
           <div className="section-header">
-            
                 <p className="section-label">Roofing Options</p>
                 <h2>Asphalt vs rubber vs metal: which roofing system is right for your home?</h2>
                 <p>
@@ -198,7 +188,7 @@ export default function ServicesPage() {
         </ScrollReveal>
       </section>
       <ScrollReveal y={40} delay={0.1}>
-      <section className="section section-light">
+      <section className="section section-light" id="how-to-choose">
         <div className="container">
             
           <div className="section-header">
@@ -238,7 +228,7 @@ export default function ServicesPage() {
         </div>
       </section>
       </ScrollReveal>
-      <section className="section service-showcase">
+      <section className="section service-showcase" id="featured-services">
         <div className="container">
           <div className="section-header">
             <p className="section-label">Featured Services</p>
@@ -309,7 +299,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="section section-light cleaning-section">
+      <section className="section section-light cleaning-section" id="cleaning-services">
         <div className="container">
           <div className="section-header">
             <ScrollReveal  y={40} delay={0.1}>
@@ -370,7 +360,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" id="our-process">
         <div className="container process-section">
           <div className="section-header">
             <p className="section-label">Our Process</p>
