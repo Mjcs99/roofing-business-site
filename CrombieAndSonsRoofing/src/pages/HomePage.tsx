@@ -6,8 +6,61 @@ import afterRoof from "../assets/after-roof-repair.jpg";
 import steepRoofOne from "../assets/homepage_photos/steep-roof-1.webp"
 import steepRoofTwo from "../assets/homepage_photos/steep-roof-2.webp"
 import "./HomePage.css";
+import { useState } from "react";
+
+import galleryOne from "../assets/homepage_photos/gallery/gallery-1.png";
+import galleryTwo from "../assets/homepage_photos/gallery/gallery-2.jpg"
+import galleryThree from "../assets/homepage_photos/gallery/gallery-3.jpg";
+import galleryFour from "../assets/homepage_photos/gallery/gallery-4.jpg";
+import galleryFive from "../assets/homepage_photos/gallery/gallery-5.jpg";
+import gallerySix from "../assets/homepage_photos/gallery/gallery-6.png";
+
 
 export default function HomePage() {
+    const galleryImages = [
+        {
+        src: galleryOne,
+        alt: "Completed residential roofing project",
+        },
+        {
+        src: galleryTwo,
+        alt: "Roof replacement project in progress",
+        },
+        {
+        src: galleryThree,
+        alt: "Steep roof project with new shingles installed",
+        },
+        {
+        src: galleryFour,
+        alt: "Professional roofing crew working on a home",
+        },
+        {
+        src: galleryFive,
+        alt: "Finished roof installation with clean lines",
+        },
+        {
+        src: gallerySix,
+        alt: "Residential exterior and roofing project",
+        },
+    ];
+    const [selectedImage, setSelectedImage] = useState<number | null>(null);
+
+    const openImage = (index: number) => setSelectedImage(index);
+    const closeImage = () => setSelectedImage(null);
+
+    const showPrevImage = () => {
+        if (selectedImage === null) return;
+        setSelectedImage(
+        selectedImage === 0 ? galleryImages.length - 1 : selectedImage - 1
+        );
+    };
+
+    const showNextImage = () => {
+        if (selectedImage === null) return;
+        setSelectedImage(
+        selectedImage === galleryImages.length - 1 ? 0 : selectedImage + 1
+        );
+    };
   return (
     <main className="home-page">
       <section className="hero">
@@ -67,7 +120,6 @@ export default function HomePage() {
           </ScrollReveal>
         </div>
       </section>
-
       <section id="about" className="about section">
         <div className="container about-grid">
           <ScrollReveal x={-40}>
@@ -106,7 +158,96 @@ export default function HomePage() {
           </ScrollReveal>
         </div>
       </section>
+      <section className="safety-hero">
+        <div className="safety-overlay" />
 
+        <div className="container safety-content">
+          <ScrollReveal y={30}>
+            <>
+              <p className="section-label">Our Commitment to Safety</p>
+              <h2>Safety comes first on every project</h2>
+
+              <p className="safety-text">
+                We take safety seriously for our crew, our customers, and your property.
+                Every project is approached with careful planning, responsible work
+                practices, and respect for the homes and businesses we work on.
+              </p>
+            </>
+          </ScrollReveal>
+
+          <div className="safety-points">
+            <ScrollReveal y={30} delay={0.05}>
+              <div className="safety-point">
+                <h3>Careful Job Site Practices</h3>
+                <p>Organized work areas and disciplined site procedures.</p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal y={30} delay={0.1}>
+              <div className="safety-point">
+                <h3>Protection for Your Property</h3>
+                <p>We work carefully around landscaping, siding, and surrounding areas.</p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal y={30} delay={0.15}>
+              <div className="safety-point">
+                <h3>Professional Workmanship</h3>
+                <p>Our team approaches every project responsibly and with attention to detail.</p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+      <section className="steep-roofs section">
+        <div className="container">
+
+            <ScrollReveal y={30}>
+            <div className="steep-roofs-text">
+
+                <p className="section-label">Steep Roof Specialists</p>
+
+                <h2>We handle steep and challenging roofs safely</h2>
+
+                <p>
+                Steep roof pitches require experience, proper safety practices,
+                and careful workmanship. Our team is equipped to work confidently
+                on high-slope roofing systems while maintaining quality and
+                attention to detail.
+                </p>
+
+                <ul className="steep-roof-list">
+                <li>Experienced with steep residential roof pitches</li>
+                <li>Proper safety equipment and work practices</li>
+                <li>Careful installation on difficult roof sections</li>
+                <li>Clean, precise workmanship on challenging projects</li>
+                </ul>
+
+            </div>
+            </ScrollReveal>
+
+            <ScrollReveal y={40}>
+            <div className="steep-roofs-images">
+
+                <img
+                src={steepRoofOne}
+                alt="Roofers working safely on a steep residential roof"
+                className="steep-roof-img"
+                loading="lazy"
+                />
+
+                <img
+                src={steepRoofTwo}
+                alt="Professional roofing crew installing shingles on steep roof"
+                className="steep-roof-img"
+                loading="lazy"
+                />
+
+            </div>
+            </ScrollReveal>
+
+        </div>
+        </section>
       <section id="services" className="services section section-light">
         <div className="container">
           <ScrollReveal y={30}>
@@ -163,56 +304,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section className="steep-roofs section">
-        <div className="container">
-
-            <ScrollReveal y={30}>
-            <div className="steep-roofs-text">
-
-                <p className="section-label">Steep Roof Specialists</p>
-
-                <h2>We handle steep and challenging roofs safely</h2>
-
-                <p>
-                Steep roof pitches require experience, proper safety practices,
-                and careful workmanship. Our team is equipped to work confidently
-                on high-slope roofing systems while maintaining quality and
-                attention to detail.
-                </p>
-
-                <ul className="steep-roof-list">
-                <li>Experienced with steep residential roof pitches</li>
-                <li>Proper safety equipment and work practices</li>
-                <li>Careful installation on difficult roof sections</li>
-                <li>Clean, precise workmanship on challenging projects</li>
-                </ul>
-
-            </div>
-            </ScrollReveal>
-
-            <ScrollReveal y={40}>
-            <div className="steep-roofs-images">
-
-                <img
-                src={steepRoofOne}
-                alt="Roofers working safely on a steep residential roof"
-                className="steep-roof-img"
-                loading="lazy"
-                />
-
-                <img
-                src={steepRoofTwo}
-                alt="Professional roofing crew installing shingles on steep roof"
-                className="steep-roof-img"
-                loading="lazy"
-                />
-
-            </div>
-            </ScrollReveal>
-
-        </div>
-        </section>
-      
       <section className="before-after section">
         <div className="container">
             <ScrollReveal y={30}>
@@ -273,99 +364,112 @@ export default function HomePage() {
         </div>
       </section>
         
-      <section id="gallery" className="gallery section">
+      <section id="services-highlight" className="gallery section">
+
+        <div className="container">
+            
+            <ScrollReveal y={30}>
+            <div className="section-header">
+                <p className="section-label">Our Services</p>
+                <h2>Quality roofing solutions for every home</h2>
+                <p>
+                From repairs to full replacements, we provide dependable roofing
+                services designed to protect your home and improve its long-term
+                performance.
+                </p>
+            </div>
+            </ScrollReveal>
+
+        </div>
+
         <ScrollReveal y={30}>
-          <ProjectCarousel />
+            <ProjectCarousel />
         </ScrollReveal>
 
-        <p className="gallery-note"></p>
-      </section>
+        </section>
 
-      <section className="why-us section section-light">
+      <section className="photo-gallery section section-light">
         <div className="container">
           <ScrollReveal y={30}>
             <div className="section-header">
-              <p className="section-label">Why Choose Us</p>
-              <h2>Clean work. Reliable service. Strong results.</h2>
+              <p className="section-label">Project Gallery</p>
+              <h2>See our work</h2>
+              <p>
+                Browse recent roofing and exterior projects completed with care,
+                quality workmanship, and attention to detail.
+              </p>
             </div>
           </ScrollReveal>
 
-          <div className="why-grid">
-            <ScrollReveal y={30} delay={0.05}>
-              <div className="why-card">
-                <h3>Professional Appearance</h3>
-                <p>
-                  We treat every property with respect and keep the job site as
-                  clean as possible.
-                </p>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal y={30} delay={0.1}>
-              <div className="why-card">
-                <h3>Clear Communication</h3>
-                <p>
-                  We keep you informed throughout the process so you know exactly
-                  what to expect.
-                </p>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal y={30} delay={0.15}>
-              <div className="why-card">
-                <h3>Built to Last</h3>
-                <p>
-                  We focus on workmanship and materials that give your roof
-                  lasting protection.
-                </p>
-              </div>
-            </ScrollReveal>
+          <div className="photo-gallery-grid">
+            {galleryImages.map((image, index) => (
+              <ScrollReveal y={30} delay={0.05 * (index + 1)} key={index}>
+                <button
+                  type="button"
+                  className="photo-gallery-item"
+                  onClick={() => openImage(index)}
+                  aria-label={`Open gallery image ${index + 1}`}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="photo-gallery-image"
+                    loading="lazy"
+                  />
+                </button>
+              </ScrollReveal>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="safety-hero">
-        <div className="safety-overlay" />
+      {selectedImage !== null && (
+        <div className="lightbox" onClick={closeImage}>
+          <button
+            type="button"
+            className="lightbox-close"
+            onClick={closeImage}
+            aria-label="Close image preview"
+          >
+            ×
+          </button>
 
-        <div className="container safety-content">
-          <ScrollReveal y={30}>
-            <>
-              <p className="section-label">Our Commitment to Safety</p>
-              <h2>Safety comes first on every project</h2>
+          <button
+            type="button"
+            className="lightbox-nav lightbox-prev"
+            onClick={(e) => {
+              e.stopPropagation();
+              showPrevImage();
+            }}
+            aria-label="Previous image"
+          >
+            ‹
+          </button>
 
-              <p className="safety-text">
-                We take safety seriously for our crew, our customers, and your property.
-                Every project is approached with careful planning, responsible work
-                practices, and respect for the homes and businesses we work on.
-              </p>
-            </>
-          </ScrollReveal>
-
-          <div className="safety-points">
-            <ScrollReveal y={30} delay={0.05}>
-              <div className="safety-point">
-                <h3>Careful Job Site Practices</h3>
-                <p>Organized work areas and disciplined site procedures.</p>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal y={30} delay={0.1}>
-              <div className="safety-point">
-                <h3>Protection for Your Property</h3>
-                <p>We work carefully around landscaping, siding, and surrounding areas.</p>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal y={30} delay={0.15}>
-              <div className="safety-point">
-                <h3>Professional Workmanship</h3>
-                <p>Our team approaches every project responsibly and with attention to detail.</p>
-              </div>
-            </ScrollReveal>
+          <div
+            className="lightbox-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={galleryImages[selectedImage].src}
+              alt={galleryImages[selectedImage].alt}
+              className="lightbox-image"
+            />
           </div>
-        </div>
-      </section>
 
+          <button
+            type="button"
+            className="lightbox-nav lightbox-next"
+            onClick={(e) => {
+              e.stopPropagation();
+              showNextImage();
+            }}
+            aria-label="Next image"
+          >
+            ›
+          </button>
+        </div>
+      )}
       <Footer />
     </main>
   );
