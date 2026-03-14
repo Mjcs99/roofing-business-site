@@ -553,3 +553,67 @@ a {
     padding: 2rem;
   }
 }
+
+.steep-roofs {
+  background: #f8fafc;
+}
+
+.steep-roofs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.steep-roofs-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.steep-roof-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.steep-roofs-text {
+  max-width: 750px;
+  margin-bottom: 3rem;
+} 
+
+.steep-roofs-text h2 {
+  margin-bottom: 1rem;
+}
+
+.steep-roofs-text p {
+  margin-bottom: 1.5rem;
+  color: #475569;
+}
+
+.steep-roof-list {
+  list-style: none;
+  padding: 0;
+}
+
+.steep-roof-list li {
+  margin-bottom: 0.6rem;
+  position: relative;
+  padding-left: 1.4rem;
+}
+
+.steep-roof-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #b91c1c;
+  font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  .steep-roofs-grid {
+    grid-template-columns: 1fr;
+  }
+}

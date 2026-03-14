@@ -3,6 +3,8 @@ import Footer from "../components/layout/Footer";
 import ProjectCarousel from "../components/layout/ProjectCarousel";
 import beforeRoof from "../assets/before-roof-repair.jpg";
 import afterRoof from "../assets/after-roof-repair.jpg";
+import steepRoofOne from "../assets/homepage_photos/steep-roof-1.webp"
+import steepRoofTwo from "../assets/homepage_photos/steep-roof-2.webp"
 import "./HomePage.css";
 
 export default function HomePage() {
@@ -161,7 +163,56 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <section className="steep-roofs section">
+        <div className="container">
 
+            <ScrollReveal y={30}>
+            <div className="steep-roofs-text">
+
+                <p className="section-label">Steep Roof Specialists</p>
+
+                <h2>We handle steep and challenging roofs safely</h2>
+
+                <p>
+                Steep roof pitches require experience, proper safety practices,
+                and careful workmanship. Our team is equipped to work confidently
+                on high-slope roofing systems while maintaining quality and
+                attention to detail.
+                </p>
+
+                <ul className="steep-roof-list">
+                <li>Experienced with steep residential roof pitches</li>
+                <li>Proper safety equipment and work practices</li>
+                <li>Careful installation on difficult roof sections</li>
+                <li>Clean, precise workmanship on challenging projects</li>
+                </ul>
+
+            </div>
+            </ScrollReveal>
+
+            <ScrollReveal y={40}>
+            <div className="steep-roofs-images">
+
+                <img
+                src={steepRoofOne}
+                alt="Roofers working safely on a steep residential roof"
+                className="steep-roof-img"
+                loading="lazy"
+                />
+
+                <img
+                src={steepRoofTwo}
+                alt="Professional roofing crew installing shingles on steep roof"
+                className="steep-roof-img"
+                loading="lazy"
+                />
+
+            </div>
+            </ScrollReveal>
+
+        </div>
+        </section>
+      
       <section className="before-after section">
         <div className="container">
             <ScrollReveal y={30}>
@@ -175,7 +226,7 @@ export default function HomePage() {
                 </p>
             </div>
             </ScrollReveal>
-
+            
             <div className="before-after-grid">
             <ScrollReveal x={-40} delay={0.05}>
                 <div className="before-after-card">
@@ -221,7 +272,7 @@ export default function HomePage() {
             </div>
         </div>
       </section>
-
+        
       <section id="gallery" className="gallery section">
         <ScrollReveal y={30}>
           <ProjectCarousel />

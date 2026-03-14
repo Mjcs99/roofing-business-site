@@ -122,13 +122,13 @@ export default function ServicesPage() {
 
             <article className="comparison-card comparison-card-featured">
               <h3>Rubber Roofing</h3>
-              <ul>
-                <li>Great for low-slope and flat roof sections</li>
-                <li>Strong waterproofing performance</li>
-                <li>Durable and practical</li>
-                <li>Good for garages, additions, and porch roofs</li>
-                <li>Smart where drainage matters most</li>
-              </ul>
+                <ul>
+                <li>Excellent durability in all weather conditions</li>
+                <li>Strong resistance to hail and impact</li>
+                <li>Clean, modern appearance</li>
+                <li>Ideal for homes exposed to high winds and severe weather</li>
+                <li>Long-lasting systems that can perform for up to 50 years</li>
+                </ul>
               <p>
                 Rubber roofing is a strong choice when your home has flat or low-slope
                 areas and you need a material built to manage water reliably.
