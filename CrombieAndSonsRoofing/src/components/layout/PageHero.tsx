@@ -1,6 +1,7 @@
 import { type ReactNode } from "react";
 import ScrollReveal from "../animations/ScrollReveal";
 import styles from "./PageHero.module.css"
+
 type HeroAction = {
   label: string;
   href: string;

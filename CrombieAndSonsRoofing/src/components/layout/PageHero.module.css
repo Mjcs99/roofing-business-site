@@ -1,18 +1,5 @@
-:global(.safety-points) {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-}
 
-:global(.safety-point h3) {
-  font-size: 1.1rem;
-  margin-bottom: 8px;
-}
 
-:global(.safety-point p) {
-  font-size: 0.95rem;
-  opacity: 0.9;
-}
 
 .eyebrow {
   display: inline-block;
@@ -25,7 +12,6 @@
 }
 
 .hero {
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -34,6 +20,10 @@
   display: flex;
   align-items: center;
   color: var(--white);
+}
+
+:global(.safety-hero).hero {
+  min-height: 40vh;
 }
 
 .heroOverlay {

@@ -259,6 +259,22 @@ a {
   border-color: rgba(255, 255, 255, 0.3);
 }
 
+.safety-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.safety-point h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.safety-point p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
 @media (max-width: 900px) {
   .before-after-grid {
     grid-template-columns: 1fr;

@@ -26,6 +26,8 @@ export const homeHero = {
 import safetyHeroImage from "/safety-roofing.png"
 
 export const safetyHero = {
+  className: "safety-hero",
+  
   eyebrow: "Our Commitment to Safety",
 
   title: "Safety comes first on every project",
