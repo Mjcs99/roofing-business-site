@@ -12,6 +12,8 @@ import soffit from "../assets/services_photos/soffit-fascia-replacement.webp"
 import repairs from "../assets/services_photos/emergency-leaks-repairs.webp"
 import sidingCleaning from "../assets/services_photos/siding-cleaning.webp"
 import roofCleaning from "../assets/services_photos/roof-cleaning.webp"
+import PageHero from "../components/layout/PageHero";
+import { servicesHero } from "../data/ServicesPageData";
 
 const serviceImages = {
   hero,
@@ -30,37 +32,7 @@ const serviceImages = {
 export default function ServicesPage() {
   return (
     <main className="services-page">
-      <section
-        className="services-hero"
-        style={{
-          backgroundImage: `linear-gradient(rgba(10, 18, 32, 0.72), rgba(10, 18, 32, 0.78)), url(${serviceImages.hero})`
-        }}
-      >
-        <ScrollReveal x={50} y={0}>
-        <div className="container services-hero-content">
-          <p className="services-eyebrow">Our Services</p>
-          <h1>Roofing & Exterior Services Built for Alberta Homes</h1>
-          <p className="services-hero-text">
-            We provide asphalt roofing, Prolok and Duraclad metal roofing systems,
-            rubber roofing, vinyl siding repairs, soffit and fascia work, emergency
-            leak repairs, and exterior cleaning services to help protect your home
-            and keep it looking its best.
-          </p>
-
-          <div className="services-hero-actions">
-            <a href="/contact" className="btn btn-primary">
-              Get a Free Estimate
-            </a>
-            <a href="/financing" className="btn btn-secondary">
-              Explore Financing
-            </a>
-          </div>
-
-          
-        </div>
-        </ScrollReveal>
-      </section>
-
+      <PageHero {...servicesHero}/>
       <section className="services-anchor-nav section">
         
         <div className="container">

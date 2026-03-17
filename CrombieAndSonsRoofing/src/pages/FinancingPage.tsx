@@ -1,35 +1,13 @@
 import Footer from "../components/layout/Footer";
+import PageHero from "../components/layout/PageHero";
+import { financingHero } from "../data/FinancingPageData";
 import "./FinancingPage.css";
 
 export default function FinancingPage() {
   return (
     <main className="financing-page">
-      <section className="financing-hero">
-        <div className="financing-hero-overlay" />
-        <div className="container financing-hero-content">
-          <p className="financing-eyebrow">Financing</p>
-          <h1>Flexible financing options for your roofing project</h1>
-          <p className="financing-hero-text">
-            A new roof is a major investment. Financing can help make your
-            project more manageable with affordable monthly payment options and
-            a simple online application process.
-          </p>
-
-          <div className="financing-hero-actions">
-            <a
-              href="https://YOUR-FINANCING-LINK-HERE.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary"
-            >
-              Apply Now
-            </a>
-            <a href="#how-it-works" className="btn btn-secondary">
-              Learn How It Works
-            </a>
-          </div>
-
-          <div className="financing-highlight">
+      <PageHero {...financingHero}> 
+        <div className="financing-highlight">
             <span className="financing-highlight-label">Example Payment</span>
             <h3>Roof replacement from $129/month*</h3>
             <p>
@@ -40,8 +18,7 @@ export default function FinancingPage() {
               *Subject to approval. Terms and monthly payments vary.
             </span>
           </div>
-        </div>
-      </section>
+      </PageHero>
 
       <section id="how-it-works" className="section">
         <div className="container">

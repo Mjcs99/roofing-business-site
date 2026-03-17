@@ -6,6 +6,9 @@ import ServicesPage from "./pages/ServicesPage.tsx";
 import FinancingPage from "./pages/FinancingPage.tsx";
 import ContactPage from "./pages/ContactPage.tsx";
 import ThankYouPage from "./pages/ThankYouPage.tsx";
+import ComingSoonPage from "./pages/ComingSoonPage";
+
+
 function App() {
   return (
     <>
@@ -18,6 +21,7 @@ function App() {
         <Route path="/financing" element={<FinancingPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/thank-you" element={<ThankYouPage />} />
+        <Route path="/coming-soon" element={<ComingSoonPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>

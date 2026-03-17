@@ -14,7 +14,8 @@ import galleryThree from "../assets/homepage_photos/gallery/gallery-3.jpg";
 import galleryFour from "../assets/homepage_photos/gallery/gallery-4.jpg";
 import galleryFive from "../assets/homepage_photos/gallery/gallery-5.jpg";
 import gallerySix from "../assets/homepage_photos/gallery/gallery-6.png";
-
+import PageHero from "../components/layout/PageHero";
+import { homeHero } from "../data/HomePageData";
 
 export default function HomePage() {
     const galleryImages = [
@@ -61,32 +62,10 @@ export default function HomePage() {
         selectedImage === galleryImages.length - 1 ? 0 : selectedImage + 1
         );
     };
+    
   return (
     <main className="home-page">
-      <section className="hero">
-        <div className="hero-overlay" />
-        <div className="hero-content container">
-          <ScrollReveal y={0} x={-50} delay={0.2}>
-            <p className="eyebrow">Trusted Roofing & Exterior Services</p>
-            <h1>Protecting Homes With Quality Craftsmanship</h1>
-            <p className="hero-text">
-              Reliable roofing solutions for residential and commercial properties.
-              From repairs to full replacements, we deliver durable work, honest
-              service, and results you can count on.
-            </p>
-
-            <div className="hero-actions">
-              <a href="/contact" className="btn btn-primary">
-                Get a Free Estimate
-              </a>
-              <a href="/services" className="btn btn-secondary">
-                View Services
-              </a>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
+      <PageHero {...homeHero} />
       <section className="trust-bar">
         <div className="container trust-grid">
           <ScrollReveal y={30} delay={0.05}>
