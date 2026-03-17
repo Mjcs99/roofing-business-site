@@ -84,6 +84,7 @@ export const beforeAfterContentCards = [
 ];
 
 export const steepRoofSection = {
+  className: "steep-roof-section",
   label: "Steep Roof Specialists", 
   title: "We handle steep and challenging roofs safely", 
   description: "Steep roof pitches require experience, proper safety practices, and careful workmanship. Our team is equipped to work confidently on high-slope roofing systems while maintaining quality and attention to detail.", 

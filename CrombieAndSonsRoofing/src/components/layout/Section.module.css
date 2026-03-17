@@ -1,6 +1,13 @@
+
 .section {
-  padding-bottom: 3rem; 
+  padding-bottom: 3rem;
+  padding-top: 3rem; 
 }
+
+:global(.steep-roof-section).section {
+  padding-top: 0rem;
+}
+
 .light {
   background: #f8fafc;
 }
