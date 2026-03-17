@@ -2,24 +2,19 @@ import Footer from "../components/layout/Footer";
 import "./ServicesPage.css";
 import hero from "../assets/roofing-services.webp"
 import ScrollReveal from "../components/animations/ScrollReveal";
-import asphalt from "../assets/services_photos/asphalt-roofing-system.webp"
-import metal from "../assets/services_photos/metal-roofing-system.webp"
 import cedar from "../assets/services_photos/cedar-shake-cleaning.jpg"
 import gutter from "../assets/services_photos/gutter.jpg"
 import siding from "../assets/services_photos/vinyl-siding-repairs.png"
-import rubber from "../assets/services_photos/rubber-roofing-system.webp"
 import soffit from "../assets/services_photos/soffit-fascia-replacement.webp"
 import repairs from "../assets/services_photos/emergency-leaks-repairs.webp"
 import sidingCleaning from "../assets/services_photos/siding-cleaning.webp"
 import roofCleaning from "../assets/services_photos/roof-cleaning.webp"
 import PageHero from "../components/layout/PageHero";
-import { servicesHero } from "../data/ServicesPageData";
+import { servicesContentCards, servicesHero } from "../data/ServicesPageData";
+import ContentCards from "../components/layout/ContentCards";
 
 const serviceImages = {
   hero,
-  asphalt,
-  metal,
-  rubber,
   siding,
   soffit,
   repairs,
@@ -122,41 +117,7 @@ export default function ServicesPage() {
               </p>
             </article>
           </div>
-
-          <div className="system-comparison-grid">
-            <article className="system-card">
-              <img src={serviceImages.asphalt} alt="Asphalt roofing installation" />
-              <div className="system-card-content">
-                <h3>When asphalt makes sense</h3>
-                <p>
-                  Asphalt is ideal when you want a reliable roofing system with strong
-                  curb appeal and a more affordable upfront cost for a standard sloped roof.
-                </p>
-              </div>
-            </article>
-
-            <article className="system-card">
-              <img src={serviceImages.rubber} alt="Rubber roofing installation" />
-              <div className="system-card-content">
-                <h3>When rubber makes sense</h3>
-                <p>
-                  Rubber is a smart solution for flat or low-slope roof areas where
-                  waterproofing, drainage, and durability are especially important.
-                </p>
-              </div>
-            </article>
-
-            <article className="system-card">
-              <img src={serviceImages.metal} alt="Metal roofing installation" />
-              <div className="system-card-content">
-                <h3>When metal makes sense</h3>
-                <p>
-                  Metal is the better choice when you want long-term value, premium
-                  appearance, and a highly durable system built for the long haul.
-                </p>
-              </div>
-            </article>
-          </div>
+          <ContentCards items={servicesContentCards}/>
         </div>
         </ScrollReveal>
       </section>

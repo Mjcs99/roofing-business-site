@@ -1,6 +1,5 @@
 import ScrollReveal from "../components/animations/ScrollReveal";
 import Footer from "../components/layout/Footer";
-import ProjectCarousel from "../components/layout/ProjectCarousel";
 import beforeRoof from "../assets/before-roof-repair.jpg";
 import afterRoof from "../assets/after-roof-repair.jpg";
 import steepRoofOne from "../assets/homepage_photos/steep-roof-1.webp"
@@ -15,7 +14,8 @@ import galleryFour from "../assets/homepage_photos/gallery/gallery-4.jpg";
 import galleryFive from "../assets/homepage_photos/gallery/gallery-5.jpg";
 import gallerySix from "../assets/homepage_photos/gallery/gallery-6.png";
 import PageHero from "../components/layout/PageHero";
-import { homeHero, safetyHero } from "../data/HomePageData";
+import { homeContentCards, homeHero, safetyHero } from "../data/HomePageData";
+import ContentCards from "../components/layout/ContentCards";
 
 export default function HomePage() {
     const galleryImages = [
@@ -346,7 +346,7 @@ export default function HomePage() {
         </div>
 
         <ScrollReveal y={30}>
-            <ProjectCarousel />
+            <ContentCards items={homeContentCards} style={{ margin: "0 2rem" }}/>
         </ScrollReveal>
 
         </section>

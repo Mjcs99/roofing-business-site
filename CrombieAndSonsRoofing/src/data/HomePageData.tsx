@@ -37,3 +37,29 @@ export const safetyHero = {
 
   actions: [],
 };
+
+import roof1 from "../assets/roof-photo.webp";
+import roof2 from "../assets/storm-damage-repair.jpg";
+import roof3 from "../assets/carousel2.png";
+
+export const homeContentCards = [
+    {
+      image: roof1,
+      alt: "Shingle roof replacement project",
+      title: "Residential Roof Replacement",
+      description: "Complete shingle replacement with clean finishing."
+    },
+    {
+      image: roof2,
+      alt: "Roof repair project",
+      title: "Storm Damage Repair",
+      description: "Repair work after hail and wind damage."
+    },
+    {
+      image: roof3,
+      alt: "Roof repair project",
+      title: "Roof Maintenance",
+      description: "Preventative maintenance to extend the life of your roof."
+    }
+  ];
+
