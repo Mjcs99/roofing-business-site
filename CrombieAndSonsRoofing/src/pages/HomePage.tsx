@@ -1,8 +1,5 @@
 import ScrollReveal from "../components/animations/ScrollReveal";
 import Footer from "../components/layout/Footer";
-import beforeRoof from "../assets/before-roof-repair.jpg";
-import afterRoof from "../assets/after-roof-repair.jpg";
-
 import "./HomePage.css";
 import { useState } from "react";
 
@@ -12,9 +9,9 @@ import galleryThree from "../assets/homepage_photos/gallery/gallery-3.jpg";
 import galleryFour from "../assets/homepage_photos/gallery/gallery-4.jpg";
 import galleryFive from "../assets/homepage_photos/gallery/gallery-5.jpg";
 import gallerySix from "../assets/homepage_photos/gallery/gallery-6.png";
-import PageHero from "../components/layout/PageHero";
-import { homeContentCards, homeHero, safetyHero, steepRoofContentCards } from "../data/HomePageData";
+import { beforeAfterContentCards, homeContentCards, homeHero, safetyHero, steepRoofContentCards } from "../data/HomePageData";
 import ContentCards from "../components/layout/ContentCards";
+import PageHero from "../components/layout/PageHero";
 
 export default function HomePage() {
     const galleryImages = [
@@ -137,7 +134,7 @@ export default function HomePage() {
         </div>
       </section>
      
-      <section className="steep-roofs section">
+      <section className="section">
         <div className="container">
 
             <ScrollReveal y={30}>
@@ -150,7 +147,6 @@ export default function HomePage() {
                 on high-slope roofing systems while maintaining quality and
                 attention to detail.
               </p>
-              
             </div>
             <ContentCards items={steepRoofContentCards} elevated style={{ "--columns": 4, "--padding": 0, "--alignment": "center"} as React.CSSProperties}/>
             </ScrollReveal>
@@ -197,10 +193,10 @@ export default function HomePage() {
           </ScrollReveal>
         </div>
       </section>
-      <section className="before-after section">
+      <section className="section">
         <div className="container">
             <ScrollReveal y={30}>
-            <div className="section-header before-after-header">
+            <div className="section-header">
                 <p className="section-label">Recent Project</p>
                 <h2>See the transformation</h2>
                 <p>
@@ -210,50 +206,8 @@ export default function HomePage() {
                 </p>
             </div>
             </ScrollReveal>
-            
-            <div className="before-after-grid">
-            <ScrollReveal x={-40} delay={0.05}>
-                <div className="before-after-card">
-                <div className="before-after-image-wrap">
-                    <img
-                    src={beforeRoof}
-                    alt="Worn roof before replacement with aging shingles"
-                    className="before-after-image"
-                    loading="lazy"
-                    />
-                    <span className="before-after-badge before-badge">Before</span>
-                </div>
-                <div className="before-after-body">
-                    <h3>Before Re-Roof</h3>
-                    <p>
-                    Aging shingles and visible wear that reduced both the roof's
-                    performance and the home's curb appeal.
-                    </p>
-                </div>
-                </div>
-            </ScrollReveal>
+            <ContentCards items={beforeAfterContentCards} className="before-after-cards" style={{"--columns": 2} as React.CSSProperties}/>
 
-            <ScrollReveal x={40} delay={0.15}>
-                <div className="before-after-card">
-                <div className="before-after-image-wrap">
-                    <img
-                    src={afterRoof}
-                    alt="Newly installed asphalt shingle roof after replacement"
-                    className="before-after-image"
-                    loading="lazy"
-                    />
-                    <span className="before-after-badge after-badge">After</span>
-                </div>
-                <div className="before-after-body">
-                    <h3>After Re-Roof</h3>
-                    <p>
-                    A brand new roofing system installed with quality materials and
-                    professional workmanship for long-term protection.
-                    </p>
-                </div>
-                </div>
-            </ScrollReveal>
-            </div>
         </div>
       </section>
       <section className="photo-gallery section section-light">

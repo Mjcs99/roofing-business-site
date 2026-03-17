@@ -69,3 +69,42 @@ ul {
     height: 220px;
   }
 }
+
+/* For Before and After content cards */
+
+:global(.before-after-cards).grid .card,
+:global(.before-after-cards) .card {
+  position: relative;
+}
+
+:global(.before-after-cards).grid .card:nth-child(1)::before,
+:global(.before-after-cards) .card:nth-child(1)::before {
+  content: "Before";
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.92);
+  color: white;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+:global(.before-after-cards).grid .card:nth-child(2)::before,
+:global(.before-after-cards) .card:nth-child(2)::before {
+  content: "After";
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(185, 28, 28, 0.94);
+  color: white;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
