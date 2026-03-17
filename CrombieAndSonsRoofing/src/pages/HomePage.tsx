@@ -141,21 +141,18 @@ export default function HomePage() {
         <div className="container">
 
             <ScrollReveal y={30}>
-            <div className="steep-roofs-text">
-                
-                <p className="section-label">Steep Roof Specialists</p>
-                
-
-                <h2>We handle steep and challenging roofs safely</h2>
-
-                <p>
+            <div className="section-header">
+              <p className="section-label">Steep Roof Specialists</p>
+              <h2>We handle steep and challenging roofs safely</h2>
+              <p>
                 Steep roof pitches require experience, proper safety practices,
                 and careful workmanship. Our team is equipped to work confidently
                 on high-slope roofing systems while maintaining quality and
                 attention to detail.
-                </p>
-                <ContentCards items={steepRoofContentCards} style={{ "--columns": 4, "--padding": 0, "--alignment": "center"} as React.CSSProperties}/>
+              </p>
+              
             </div>
+            <ContentCards items={steepRoofContentCards} elevated style={{ "--columns": 4, "--padding": 0, "--alignment": "center"} as React.CSSProperties}/>
             </ScrollReveal>
         </div>
         </section>
@@ -195,48 +192,9 @@ export default function HomePage() {
               </p>
             </div>
           </ScrollReveal>
-
-          <div className="services-grid">
-            <ScrollReveal y={30} delay={0.05}>
-              <article className="service-card">
-                <h3>Roof Repairs</h3>
-                <p>
-                  Fast, dependable repairs for leaks, storm damage, missing
-                  shingles, and general wear.
-                </p>
-              </article>
-            </ScrollReveal>
-
-            <ScrollReveal y={30} delay={0.1}>
-              <article className="service-card">
-                <h3>Roof Replacements</h3>
-                <p>
-                  Full tear-offs and replacement systems installed with care and
-                  durable materials.
-                </p>
-              </article>
-            </ScrollReveal>
-
-            <ScrollReveal y={30} delay={0.15}>
-              <article className="service-card">
-                <h3>Inspections</h3>
-                <p>
-                  Thorough roof inspections to catch issues early and help you
-                  plan the next step.
-                </p>
-              </article>
-            </ScrollReveal>
-
-            <ScrollReveal y={30} delay={0.2}>
-              <article className="service-card">
-                <h3>Exterior Work</h3>
-                <p>
-                  Improve protection and curb appeal with exterior services that
-                  complement your roof.
-                </p>
-              </article>
-            </ScrollReveal>
-          </div>
+          <ScrollReveal y={30}>
+            <ContentCards items={homeContentCards} style={{ margin: "0 2rem" }}/>
+          </ScrollReveal>
         </div>
       </section>
       <section className="before-after section">
@@ -298,31 +256,6 @@ export default function HomePage() {
             </div>
         </div>
       </section>
-        
-      <section id="services-highlight" className="gallery section">
-
-        <div className="container">
-            
-            <ScrollReveal y={30}>
-            <div className="section-header">
-                <p className="section-label">Our Services</p>
-                <h2>Quality roofing solutions for every home</h2>
-                <p>
-                From repairs to full replacements, we provide dependable roofing
-                services designed to protect your home and improve its long-term
-                performance.
-                </p>
-            </div>
-            </ScrollReveal>
-
-        </div>
-
-        <ScrollReveal y={30}>
-            <ContentCards items={homeContentCards} style={{ margin: "0 2rem" }}/>
-        </ScrollReveal>
-
-        </section>
-
       <section className="photo-gallery section section-light">
         <div className="container">
           <ScrollReveal y={30}>

@@ -11,14 +11,15 @@ type CardItem = {
 
 type Props = {
   items: CardItem[];
+  elevated?: boolean;
   style?: React.CSSProperties;
 };
 
-export default function ContentCards({ items, style }: Props) {
+export default function ContentCards({ items, elevated = false, style }: Props) {
   return (
     <div className={styles.grid} style={style}>
       {items.map((item, index) => (
-        <article key={index} className={`${styles.card} ${item.featured ? styles.featured : ""}`}>
+        <article key={index} className={`${styles.card} ${item.featured ? styles.featured : ""} ${elevated ? styles.elevated : ""}`}>
           {item.image && (
             <img src={item.image} alt={item.alt ?? ""} className={styles.image} />
           )}
