@@ -2,8 +2,7 @@ import ScrollReveal from "../components/animations/ScrollReveal";
 import Footer from "../components/layout/Footer";
 import beforeRoof from "../assets/before-roof-repair.jpg";
 import afterRoof from "../assets/after-roof-repair.jpg";
-import steepRoofOne from "../assets/homepage_photos/steep-roof-1.webp"
-import steepRoofTwo from "../assets/homepage_photos/steep-roof-2.webp"
+
 import "./HomePage.css";
 import { useState } from "react";
 
@@ -155,9 +154,7 @@ export default function HomePage() {
                 on high-slope roofing systems while maintaining quality and
                 attention to detail.
                 </p>
-                
                 <ContentCards items={steepRoofContentCards} style={{ "--columns": 4, "--padding": 0, "--alignment": "center"} as React.CSSProperties}/>
-
             </div>
             </ScrollReveal>
         </div>
