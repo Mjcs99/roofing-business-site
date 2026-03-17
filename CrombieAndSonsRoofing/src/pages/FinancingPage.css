@@ -2,67 +2,6 @@
   width: 100%;
 }
 
-.financing-hero {
-  position: relative;
-  min-height: 62vh;
-  display: flex;
-  align-items: center;
-  background:
-    linear-gradient(rgba(15, 23, 42, 0.52), rgba(15, 23, 42, 0.68)),
-    url("../assets/financing.png")
-      center/cover no-repeat;
-  color: var(--white);
-}
-
-.financing-hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(15, 23, 42, 0.74) 0%,
-    rgba(15, 23, 42, 0.38) 65%,
-    rgba(15, 23, 42, 0.2) 100%
-  );
-}
-
-.financing-hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 780px;
-  padding: 6rem 0 5rem;
-}
-
-.financing-eyebrow {
-  display: inline-block;
-  margin-bottom: 0.75rem;
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--accent);
-}
-
-.financing-hero h1 {
-  margin: 0 0 1rem;
-  font-size: clamp(2.4rem, 5vw, 4.4rem);
-  line-height: 1.02;
-  letter-spacing: -0.03em;
-}
-
-.financing-hero-text {
-  max-width: 660px;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.financing-hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1.75rem;
-}
-
 .financing-highlight {
   margin-top: 2rem;
   max-width: 520px;

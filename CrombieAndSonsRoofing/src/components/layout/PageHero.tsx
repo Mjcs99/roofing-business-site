@@ -1,6 +1,6 @@
 import { type ReactNode } from "react";
 import ScrollReveal from "../animations/ScrollReveal";
-
+import styles from "./PageHero.module.css"
 type HeroAction = {
   label: string;
   href: string;
@@ -28,7 +28,7 @@ export default function PageHero({
 }: PageHeroProps) {
   return (
     <section
-      className={`hero ${className}`}
+      className={`${styles.hero} ${className}`}
       style={
         backgroundImage
           ? {
@@ -37,18 +37,18 @@ export default function PageHero({
           : undefined
       }
     >
-      <div className="hero-overlay" />
+      <div className={styles.pageOverlay} />
 
-      <div className="hero-content container">
+      <div className={`${styles.heroContent} container`}>
         <ScrollReveal x={-50} y={0} delay={0.2}>
-          <p className="eyebrow">{eyebrow}</p>
+          <p className={styles.eyebrow}>{eyebrow}</p>
 
           <h1>{title}</h1>
 
-          <p className="hero-text">{description}</p>
+          <p className={styles.heroText}>{description}</p>
 
           {actions.length > 0 && (
-            <div className="hero-actions">
+            <div className={styles.heroActions}>
               {actions.map((action) => (
                 <a
                   key={action.label}

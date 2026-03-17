@@ -2,22 +2,6 @@
   width: 100%;
 }
 
-.services-hero {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 84vh;
-  display: flex;
-  align-items: center;
-  color: #fff;
-}
-
-.services-hero-content {
-  position: relative;
-  padding: 6rem 0;
-}
-
-.services-eyebrow,
 .section-label {
   font-size: 0.85rem;
   text-transform: uppercase;
@@ -27,32 +11,13 @@
   margin-bottom: 1rem;
 }
 
-.services-hero h1 {
-  max-width: 850px;
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  line-height: 1.05;
-  margin-bottom: 1.25rem;
-}
-
-.services-hero-text {
-  max-width: 760px;
-  font-size: 1.08rem;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.92);
-  margin-bottom: 2rem;
-}
-
-.services-hero-actions,
 .financing-actions,
-.services-cta-actions,
-.hero-financing-actions {
+.services-cta-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
 
-.hero-financing-card,
-.services-highlight-card,
 .financing-card,
 .comparison-card,
 .service-detail-card,
@@ -65,30 +30,6 @@
   box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
 }
 
-.hero-financing-card {
-  max-width: 420px;
-  margin-top: 2rem;
-  padding: 1.5rem;
-  color: #162033;
-}
-
-.hero-financing-label {
-  display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #b67d28;
-  margin-bottom: 0.75rem;
-}
-
-.hero-financing-link {
-  font-weight: 700;
-  color: #0f172a;
-  text-decoration: none;
-}
-
-.hero-financing-disclaimer,
 .financing-note {
   display: block;
   margin-top: 1rem;
