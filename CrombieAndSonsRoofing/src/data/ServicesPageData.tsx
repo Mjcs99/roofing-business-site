@@ -1,4 +1,4 @@
-import heroImage from "../assets/financing.png"
+import heroImage from "../assets/roofing-services.webp"
 
 export const servicesHero = {
   eyebrow: "Our Services",
