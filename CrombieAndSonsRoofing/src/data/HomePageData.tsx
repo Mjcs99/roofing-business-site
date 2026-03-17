@@ -63,14 +63,16 @@ export const homeContentCards = [
       description: "Preventative maintenance to extend the life of your roof."
     }
   ];
+
 import steepRoofOne from "../assets/homepage_photos/steep-roof-1.webp"
 import steepRoofTwo from "../assets/homepage_photos/steep-roof-2.webp"
 import carefulInstallation from "../assets/roofing-services.webp"
+
 export const steepRoofContentCards = [
-  {featured: true, title: "Experienced with steep residential roof pitches", image: steepRoofOne},
-  {featured: true, title: "Proper safety equipment and work practices", image: safetyHeroImage},
-  {featured: true, title: "Careful installation on difficult roof sections", image: carefulInstallation},
-  {featured: true, title: "Clean, precise workmanship on challenging projects", image: steepRoofTwo}
+  {title: "Experienced with steep residential roof pitches", image: steepRoofOne},
+  {title: "Proper safety equipment and work practices", image: safetyHeroImage},
+  {title: "Careful installation on difficult roof sections", image: carefulInstallation},
+  {title: "Clean, precise workmanship on challenging projects", image: steepRoofTwo}
 ]
 
 import beforeRoof from "../assets/before-roof-repair.jpg";
@@ -80,3 +82,11 @@ export const beforeAfterContentCards = [
   {title: "Before roof replacement", description: "Aging shingles and visible wear that reduced both the roof's performance and the home's curb appeal.", image: beforeRoof},
   {title: "After roof replacement", description: "A brand new roofing system installed with quality materials and professional workmanship for long-term protection.", image: afterRoof}
 ];
+
+export const steepRoofSection = {
+  label: "Steep Roof Specialists", 
+  title: "We handle steep and challenging roofs safely", 
+  description: "Steep roof pitches require experience, proper safety practices, and careful workmanship. Our team is equipped to work confidently on high-slope roofing systems while maintaining quality and attention to detail.", 
+  reveal: true
+}
+

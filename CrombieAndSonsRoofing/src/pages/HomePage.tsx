@@ -9,9 +9,10 @@ import galleryThree from "../assets/homepage_photos/gallery/gallery-3.jpg";
 import galleryFour from "../assets/homepage_photos/gallery/gallery-4.jpg";
 import galleryFive from "../assets/homepage_photos/gallery/gallery-5.jpg";
 import gallerySix from "../assets/homepage_photos/gallery/gallery-6.png";
-import { beforeAfterContentCards, homeContentCards, homeHero, safetyHero, steepRoofContentCards } from "../data/HomePageData";
+import { beforeAfterContentCards, homeContentCards, homeHero, safetyHero, steepRoofContentCards, steepRoofSection } from "../data/HomePageData";
 import ContentCards from "../components/layout/ContentCards";
 import PageHero from "../components/layout/PageHero";
+import Section from "../components/layout/Section";
 
 export default function HomePage() {
     const galleryImages = [
@@ -133,25 +134,9 @@ export default function HomePage() {
           </ScrollReveal>
         </div>
       </section>
-     
-      <section className="section">
-        <div className="container">
-
-            <ScrollReveal y={30}>
-            <div className="section-header">
-              <p className="section-label">Steep Roof Specialists</p>
-              <h2>We handle steep and challenging roofs safely</h2>
-              <p>
-                Steep roof pitches require experience, proper safety practices,
-                and careful workmanship. Our team is equipped to work confidently
-                on high-slope roofing systems while maintaining quality and
-                attention to detail.
-              </p>
-            </div>
-            <ContentCards items={steepRoofContentCards} elevated style={{ "--columns": 4, "--padding": 0, "--alignment": "center"} as React.CSSProperties}/>
-            </ScrollReveal>
-        </div>
-        </section>
+      <Section {...steepRoofSection}>
+        <ContentCards items={steepRoofContentCards} elevated style={{ "--columns": 4, "--padding": 0, "--alignment": "center"} as React.CSSProperties}/>
+      </Section>
       <PageHero {...safetyHero}>
         <div className="safety-points">
             <ScrollReveal y={30} delay={0.05}>

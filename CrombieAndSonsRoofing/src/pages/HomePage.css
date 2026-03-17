@@ -43,30 +43,7 @@ a {
   margin: 0 auto;
 }
 
-.section {
-  padding: 5rem 0;
-}
 
-.section-light {
-  background: var(--bg);
-}
-
-.section-header {
-  max-width: 700px;
-  margin-bottom: 2.5rem;
-}
-
-.section-label{
-  display: inline-block;
-  margin-bottom: 0.75rem;
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--accent);
-}
-
-.section-header h2,
 .about-text h2,
 .cta h2 {
   margin: 0 0 1rem;
@@ -74,7 +51,6 @@ a {
   line-height: 1.1;
 }
 
-.section-header p,
 .about-text p,
 .cta p {
   color: var(--muted);
