@@ -19,7 +19,6 @@
 }
 
 .financing-card,
-.comparison-card,
 .service-detail-card,
 .process-card,
 .cleaning-card,
@@ -67,8 +66,7 @@
 }
 
 .services-intro-grid,
-.financing-grid,
-.comparison-grid {
+.financing-grid {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -81,7 +79,6 @@
 
 .services-highlight-card ul,
 .financing-card ul,
-.comparison-card ul,
 .featured-service-content ul {
   margin: 1rem 0 0;
   padding-left: 1.15rem;
@@ -112,7 +109,6 @@
 }
 
 .service-detail-card h3,
-.comparison-card h3,
 .featured-service-content h3,
 .cleaning-card h3,
 .process-card h3 {
@@ -121,7 +117,6 @@
 }
 
 .service-detail-card p,
-.comparison-card p,
 .featured-service-content p,
 .cleaning-card p,
 .process-card p {
@@ -129,13 +124,6 @@
   line-height: 1.75;
 }
 
-.comparison-card {
-  padding: 2rem;
-}
-
-.comparison-card-featured {
-  border: 2px solid #caa25a;
-}
 
 .featured-service-row {
   display: grid;
@@ -301,7 +289,6 @@
 @media (max-width: 768px) {
   .services-intro-grid,
   .financing-grid,
-  .comparison-grid,
   .service-detail-grid,
   .cleaning-grid,
   .process-grid,

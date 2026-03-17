@@ -49,3 +49,44 @@ export const servicesContentCards = [
       description: "Rubber is a smart solution for flat or low-slope roof areas where waterproofing, drainage, and durability are especially important."
     }
   ];
+
+
+  export const servicesComparisonContentCards = [
+  {
+    title: "Rubber Roofing",
+    description:
+      "Rubber roofing is a strong choice when your home has flat or low-slope areas and you need a material built to manage water reliably.",
+    points: [
+      "Excellent durability in all weather conditions",
+      "Strong resistance to hail and impact",
+      "Clean, modern appearance",
+      "Ideal for homes exposed to high winds and severe weather",
+      "Long-lasting systems that can perform for up to 50 years",
+    ],
+  },
+  {
+    featured: true,
+    title: "Asphalt Roofing",
+    description:
+      "Asphalt is often the best choice for homeowners who want dependable protection, proven performance, and a more budget-friendly replacement.",
+    points: [
+      "Lower upfront cost",
+      "Popular residential roofing choice",
+      "Works well on many sloped roofs",
+      "Available in many colours and styles",
+      "Great balance of appearance and affordability",
+    ],
+  },
+  {
+    title: "Metal Roofing",
+    description:
+      "Metal is a strong option when you want long-term durability, premium appearance, and excellent weather resistance.",
+    points: [
+      "Long lifespan",
+      "Low maintenance",
+      "Modern appearance",
+      "Excellent weather resistance",
+      "Strong long-term value",
+    ],
+  },
+];

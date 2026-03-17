@@ -10,7 +10,7 @@ import repairs from "../assets/services_photos/emergency-leaks-repairs.webp"
 import sidingCleaning from "../assets/services_photos/siding-cleaning.webp"
 import roofCleaning from "../assets/services_photos/roof-cleaning.webp"
 import PageHero from "../components/layout/PageHero";
-import { servicesContentCards, servicesHero } from "../data/ServicesPageData";
+import { servicesComparisonContentCards, servicesContentCards, servicesHero } from "../data/ServicesPageData";
 import ContentCards from "../components/layout/ContentCards";
 
 const serviceImages = {
@@ -70,53 +70,7 @@ export default function ServicesPage() {
                 </p>
             
           </div>
-            
-          <div className="comparison-grid comparison-grid-three">
-            <article className="comparison-card">
-              <h3>Asphalt Roofing</h3>
-              <ul>
-                <li>Lower upfront cost</li>
-                <li>Popular residential roofing choice</li>
-                <li>Works well on many sloped roofs</li>
-                <li>Available in many colours and styles</li>
-                <li>Great balance of appearance and affordability</li>
-              </ul>
-              <p>
-                Asphalt is often the best choice for homeowners who want dependable
-                protection, proven performance, and a more budget-friendly replacement.
-              </p>
-            </article>
-
-            <article className="comparison-card comparison-card-featured">
-              <h3>Rubber Roofing</h3>
-                <ul>
-                <li>Excellent durability in all weather conditions</li>
-                <li>Strong resistance to hail and impact</li>
-                <li>Clean, modern appearance</li>
-                <li>Ideal for homes exposed to high winds and severe weather</li>
-                <li>Long-lasting systems that can perform for up to 50 years</li>
-                </ul>
-              <p>
-                Rubber roofing is a strong choice when your home has flat or low-slope
-                areas and you need a material built to manage water reliably.
-              </p>
-            </article>
-
-            <article className="comparison-card">
-              <h3>Metal Roofing</h3>
-              <ul>
-                <li>Longer lifespan</li>
-                <li>Premium appearance</li>
-                <li>Excellent durability in harsh weather</li>
-                <li>Lower maintenance over time</li>
-                <li>Strong long-term value</li>
-              </ul>
-              <p>
-                Metal is a great fit for homeowners who want to invest more upfront for
-                long-term durability, premium performance, and a cleaner finished look.
-              </p>
-            </article>
-          </div>
+          <ContentCards items={servicesComparisonContentCards}/>
           <ContentCards items={servicesContentCards}/>
         </div>
         </ScrollReveal>
