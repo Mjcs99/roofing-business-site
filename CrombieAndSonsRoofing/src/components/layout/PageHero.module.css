@@ -1,3 +1,19 @@
+:global(.safety-points) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+:global(.safety-point h3) {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+:global(.safety-point p) {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
 .eyebrow {
   display: inline-block;
   margin-bottom: 0.75rem;
@@ -69,24 +85,24 @@ background-size: cover;
   transition: 0.25s ease;
 }
 
-.btn-primary {
+.primary {
   background: var(--accent);
   color: var(--white);
 }
 
-.btnPrimary:hover {
+.primary:hover {
   background: #b9791f;
   transform: translateY(-2px);
 }
 
-.btnSecondary {
+.secondary {
   border: 1px solid rgba(255, 255, 255, 0.35);
   color: var(--white);
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(6px);
 }
 
-.btnSecondary:hover {
+.secondary:hover {
   background: rgba(255, 255, 255, 0.14);
   transform: translateY(-2px);
 }

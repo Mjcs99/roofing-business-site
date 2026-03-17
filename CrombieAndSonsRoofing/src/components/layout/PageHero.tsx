@@ -53,7 +53,8 @@ export default function PageHero({
                 <a
                   key={action.label}
                   href={action.href}
-                  className={`btn btn-${action.variant ?? "primary"}`}
+                  className={`${styles.btn} ${styles[action.variant ?? "primary"]}`}
+                  
                 >
                   {action.label}
                 </a>

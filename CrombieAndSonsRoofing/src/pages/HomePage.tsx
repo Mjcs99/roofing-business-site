@@ -15,7 +15,7 @@ import galleryFour from "../assets/homepage_photos/gallery/gallery-4.jpg";
 import galleryFive from "../assets/homepage_photos/gallery/gallery-5.jpg";
 import gallerySix from "../assets/homepage_photos/gallery/gallery-6.png";
 import PageHero from "../components/layout/PageHero";
-import { homeHero } from "../data/HomePageData";
+import { homeHero, safetyHero } from "../data/HomePageData";
 
 export default function HomePage() {
     const galleryImages = [
@@ -137,47 +137,7 @@ export default function HomePage() {
           </ScrollReveal>
         </div>
       </section>
-      <section className="safety-hero">
-        <div className="safety-overlay" />
-
-        <div className="container safety-content">
-          <ScrollReveal y={30}>
-            <>
-              <p className="section-label">Our Commitment to Safety</p>
-              <h2>Safety comes first on every project</h2>
-
-              <p className="safety-text">
-                We take safety seriously for our crew, our customers, and your property.
-                Every project is approached with careful planning, responsible work
-                practices, and respect for the homes and businesses we work on.
-              </p>
-            </>
-          </ScrollReveal>
-
-          <div className="safety-points">
-            <ScrollReveal y={30} delay={0.05}>
-              <div className="safety-point">
-                <h3>Careful Job Site Practices</h3>
-                <p>Organized work areas and disciplined site procedures.</p>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal y={30} delay={0.1}>
-              <div className="safety-point">
-                <h3>Protection for Your Property</h3>
-                <p>We work carefully around landscaping, siding, and surrounding areas.</p>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal y={30} delay={0.15}>
-              <div className="safety-point">
-                <h3>Professional Workmanship</h3>
-                <p>Our team approaches every project responsibly and with attention to detail.</p>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
+     
       <section className="steep-roofs section">
         <div className="container">
 
@@ -227,6 +187,30 @@ export default function HomePage() {
 
         </div>
         </section>
+      <PageHero {...safetyHero}>
+        <div className="safety-points">
+            <ScrollReveal y={30} delay={0.05}>
+              <div className="safety-point">
+                <h3>Careful Job Site Practices</h3>
+                <p>Organized work areas and disciplined site procedures.</p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal y={30} delay={0.1}>
+              <div className="safety-point">
+                <h3>Protection for Your Property</h3>
+                <p>We work carefully around landscaping, siding, and surrounding areas.</p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal y={30} delay={0.15}>
+              <div className="safety-point">
+                <h3>Professional Workmanship</h3>
+                <p>Our team approaches every project responsibly and with attention to detail.</p>
+              </div>
+            </ScrollReveal>
+          </div>
+      </PageHero>
       <section id="services" className="services section section-light">
         <div className="container">
           <ScrollReveal y={30}>
