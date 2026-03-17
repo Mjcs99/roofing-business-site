@@ -70,10 +70,10 @@ export default function ServicesPage() {
                 </p>
             
           </div>
-          <ContentCards items={servicesComparisonContentCards}/>
+          <ContentCards items={servicesComparisonContentCards} style={{"--alignment": "left"} as React.CSSProperties} />
           <ContentCards items={servicesContentCards}/>
         </div>
-        </ScrollReveal>
+        </ScrollReveal> 
       </section>
       <ScrollReveal y={40} delay={0.1}>
       <section className="section section-light" id="how-to-choose">

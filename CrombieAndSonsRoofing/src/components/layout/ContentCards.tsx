@@ -5,7 +5,7 @@ type CardItem = {
   image?: string;
   alt?: string;
   title: string;
-  description: string;
+  description?: string;
   points?: string[];
 };
 

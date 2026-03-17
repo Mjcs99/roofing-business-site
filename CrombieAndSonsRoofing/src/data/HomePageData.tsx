@@ -42,6 +42,7 @@ import roof1 from "../assets/roof-photo.webp";
 import roof2 from "../assets/storm-damage-repair.jpg";
 import roof3 from "../assets/carousel2.png";
 
+
 export const homeContentCards = [
     {
       image: roof1,
@@ -62,4 +63,13 @@ export const homeContentCards = [
       description: "Preventative maintenance to extend the life of your roof."
     }
   ];
-
+import steepRoofOne from "../assets/homepage_photos/steep-roof-1.webp"
+import steepRoofTwo from "../assets/homepage_photos/steep-roof-2.webp"
+import carefulInstallation from "../assets/roofing-services.webp"
+export const steepRoofContentCards = [
+  {featured: true, title: "Experienced with steep residential roof pitches", image: steepRoofOne},
+  {featured: true, title: "Proper safety equipment and work practices", image: safetyHeroImage},
+  {featured: true, title: "Careful installation on difficult roof sections", image: carefulInstallation},
+  {featured: true, title: "Clean, precise workmanship on challenging projects", image: steepRoofTwo}
+]
+ 

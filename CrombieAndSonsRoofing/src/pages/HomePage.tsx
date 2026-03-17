@@ -14,7 +14,7 @@ import galleryFour from "../assets/homepage_photos/gallery/gallery-4.jpg";
 import galleryFive from "../assets/homepage_photos/gallery/gallery-5.jpg";
 import gallerySix from "../assets/homepage_photos/gallery/gallery-6.png";
 import PageHero from "../components/layout/PageHero";
-import { homeContentCards, homeHero, safetyHero } from "../data/HomePageData";
+import { homeContentCards, homeHero, safetyHero, steepRoofContentCards } from "../data/HomePageData";
 import ContentCards from "../components/layout/ContentCards";
 
 export default function HomePage() {
@@ -143,8 +143,9 @@ export default function HomePage() {
 
             <ScrollReveal y={30}>
             <div className="steep-roofs-text">
-
+                
                 <p className="section-label">Steep Roof Specialists</p>
+                
 
                 <h2>We handle steep and challenging roofs safely</h2>
 
@@ -154,37 +155,11 @@ export default function HomePage() {
                 on high-slope roofing systems while maintaining quality and
                 attention to detail.
                 </p>
-
-                <ul className="steep-roof-list">
-                <li>Experienced with steep residential roof pitches</li>
-                <li>Proper safety equipment and work practices</li>
-                <li>Careful installation on difficult roof sections</li>
-                <li>Clean, precise workmanship on challenging projects</li>
-                </ul>
+                
+                <ContentCards items={steepRoofContentCards} style={{ "--columns": 4, "--padding": 0, "--alignment": "center"} as React.CSSProperties}/>
 
             </div>
             </ScrollReveal>
-
-            <ScrollReveal y={40}>
-            <div className="steep-roofs-images">
-
-                <img
-                src={steepRoofOne}
-                alt="Roofers working safely on a steep residential roof"
-                className="steep-roof-img"
-                loading="lazy"
-                />
-
-                <img
-                src={steepRoofTwo}
-                alt="Professional roofing crew installing shingles on steep roof"
-                className="steep-roof-img"
-                loading="lazy"
-                />
-
-            </div>
-            </ScrollReveal>
-
         </div>
         </section>
       <PageHero {...safetyHero}>
