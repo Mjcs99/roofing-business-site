@@ -90,3 +90,22 @@ export const steepRoofSection = {
   reveal: true
 }
 
+export const homepageServicesSection = {
+  label: "Our Services",
+  title: "Professional roofing solutions",
+  description: "Tailored services for homeowners, property managers, and businesses.",
+  reveal: true
+}
+
+export const beforeAfterSection = {
+  label: "Recent Project",
+  title: "See the transformation",
+  description: "This project shows the difference a professional re-roof can make. Our team removed the aging materials and installed a durable new roofing system built to protect the home for years to come.",
+  reveal: true
+}
+export const seeOurWorkSection ={
+  label: "Project Gallery",
+  title: "See our work",
+  description: "Browse recent roofing and exterior projects completed with care, quality workmanship, and attention to detail.",
+  reveal: true
+}

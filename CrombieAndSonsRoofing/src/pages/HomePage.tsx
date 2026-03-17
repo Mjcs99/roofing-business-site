@@ -9,7 +9,7 @@ import galleryThree from "../assets/homepage_photos/gallery/gallery-3.jpg";
 import galleryFour from "../assets/homepage_photos/gallery/gallery-4.jpg";
 import galleryFive from "../assets/homepage_photos/gallery/gallery-5.jpg";
 import gallerySix from "../assets/homepage_photos/gallery/gallery-6.png";
-import { beforeAfterContentCards, homeContentCards, homeHero, safetyHero, steepRoofContentCards, steepRoofSection } from "../data/HomePageData";
+import { beforeAfterContentCards, beforeAfterSection, homeContentCards, homeHero, homepageServicesSection, safetyHero, seeOurWorkSection, steepRoofContentCards, steepRoofSection } from "../data/HomePageData";
 import ContentCards from "../components/layout/ContentCards";
 import PageHero from "../components/layout/PageHero";
 import Section from "../components/layout/Section";
@@ -161,54 +161,14 @@ export default function HomePage() {
             </ScrollReveal>
           </div>
       </PageHero>
-      <section id="services" className="services section section-light">
-        <div className="container">
-          <ScrollReveal y={30}>
-            <div className="section-header">
-              <p className="section-label">Our Services</p>
-              <h2>Professional roofing solutions</h2>
-              <p>
-                Tailored services for homeowners, property managers, and
-                businesses.
-              </p>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal y={30}>
-            <ContentCards items={homeContentCards} style={{ margin: "0 2rem" }}/>
-          </ScrollReveal>
-        </div>
-      </section>
-      <section className="section">
-        <div className="container">
-            <ScrollReveal y={30}>
-            <div className="section-header">
-                <p className="section-label">Recent Project</p>
-                <h2>See the transformation</h2>
-                <p>
-                This project shows the difference a professional re-roof can make.
-                Our team removed the aging materials and installed a durable new
-                roofing system built to protect the home for years to come.
-                </p>
-            </div>
-            </ScrollReveal>
-            <ContentCards items={beforeAfterContentCards} className="before-after-cards" style={{"--columns": 2} as React.CSSProperties}/>
-
-        </div>
-      </section>
-      <section className="photo-gallery section section-light">
-        <div className="container">
-          <ScrollReveal y={30}>
-            <div className="section-header">
-              <p className="section-label">Project Gallery</p>
-              <h2>See our work</h2>
-              <p>
-                Browse recent roofing and exterior projects completed with care,
-                quality workmanship, and attention to detail.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="photo-gallery-grid">
+      <Section {...homepageServicesSection}>
+        <ContentCards items={homeContentCards} style={{ margin: "0 2rem" }}/>
+      </Section>
+      <Section {...beforeAfterSection}>
+        <ContentCards items={beforeAfterContentCards} className="before-after-cards" style={{"--columns": 2} as React.CSSProperties}/>
+      </Section>
+      <Section {...seeOurWorkSection}>
+        <div className="photo-gallery-grid">
             {galleryImages.map((image, index) => (
               <ScrollReveal y={30} delay={0.05 * (index + 1)} key={index}>
                 <button
@@ -227,9 +187,7 @@ export default function HomePage() {
               </ScrollReveal>
             ))}
           </div>
-        </div>
-      </section>
-
+      </Section>
       {selectedImage !== null && (
         <div className="lightbox" onClick={closeImage}>
           <button
