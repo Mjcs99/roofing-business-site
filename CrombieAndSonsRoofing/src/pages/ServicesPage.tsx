@@ -309,7 +309,7 @@ export default function ServicesPage() {
 
             <div className="financing-actions">
               <a
-                href="https://YOUR-FINANCING-LINK-HERE.com"
+                href="/coming-soon"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary"
