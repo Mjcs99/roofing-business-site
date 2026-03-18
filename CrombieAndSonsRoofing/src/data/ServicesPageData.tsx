@@ -46,7 +46,7 @@ export const servicesContentCards = [
       image: rubber,
       alt: "Rubber roof shingles",
       title: "When rubber makes sense",
-      description: "Rubber is a smart solution for flat or low-slope roof areas where waterproofing, drainage, and durability are especially important."
+      description: "Rubber roofing is built for durability, standing up to high winds, hail, and extreme weather while providing long-lasting protection."
     }
   ];
 

@@ -99,8 +99,7 @@ export default function ServicesPage() {
               <div className="service-icon">R</div>
               <h3>Choose Rubber If...</h3>
               <p>
-                You have a flat or low-slope area and want a roofing material designed
-                for strong waterproofing performance and practical durability.
+                You want a tough, long-lasting roofing solution that handles hail, high winds, and extreme weather with minimal maintenance.
               </p>
             </article>
 
