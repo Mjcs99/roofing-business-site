@@ -7,7 +7,7 @@ export default function ComingSoonPage() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate("/financing");
+      navigate(-1);
     }, 5000);
 
     return () => clearTimeout(timer);
@@ -24,7 +24,7 @@ export default function ComingSoonPage() {
 
         <p className="coming-soon-sub">
           If you are not redirected,{" "}
-          <button onClick={() => navigate("/financing")}>
+          <button onClick={() => navigate(-1)}>
             click here
           </button>
         </p>
