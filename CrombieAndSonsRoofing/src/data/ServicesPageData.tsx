@@ -55,7 +55,7 @@ export const servicesContentCards = [
   {
     title: "Rubber Roofing",
     description:
-      "Rubber roofing is a strong choice when your home has flat or low-slope areas and you need a material built to manage water reliably.",
+      "Rubber roofing is a durable solution for homes facing high winds and hail, with a lifespan of up to 50 years.",
     points: [
       "Excellent durability in all weather conditions",
       "Strong resistance to hail and impact",

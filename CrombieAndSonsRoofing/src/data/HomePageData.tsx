@@ -1,4 +1,4 @@
-import heroImage from "../assets/roof-photo.webp"
+import heroImage from "../assets/homepage_photos/homepage-hero-roof-finished.png"
 export const homeHero = {
   eyebrow: "Trusted Roofing & Exterior Services",
 
