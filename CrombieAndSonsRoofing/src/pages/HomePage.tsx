@@ -9,7 +9,7 @@ import galleryThree from "../assets/homepage_photos/gallery/gallery-3.jpg";
 import galleryFour from "../assets/homepage_photos/gallery/gallery-4.jpg";
 import galleryFive from "../assets/homepage_photos/gallery/gallery-5.jpg";
 import gallerySix from "../assets/homepage_photos/gallery/gallery-6.png";
-import { beforeAfterContentCards, beforeAfterSection, homeContentCards, homeHero, homepageServicesSection, safetyHero, seeOurWorkSection, steepRoofContentCards, steepRoofSection } from "../data/HomePageData";
+import { aboutSection, beforeAfterContentCards, beforeAfterSection, homeContentCards, homeHero, homepageServicesSection, safetyHero, seeOurWorkSection, steepRoofContentCards, steepRoofSection } from "../data/HomePageData";
 import ContentCards from "../components/layout/ContentCards";
 import PageHero from "../components/layout/PageHero";
 import Section from "../components/layout/Section";
@@ -96,27 +96,8 @@ export default function HomePage() {
           </ScrollReveal>
         </div>
       </section>
-      <section id="about" className="about section">
-        <div className="container about-grid">
-          <ScrollReveal x={-40}>
-            <div className="about-text">
-              <p className="section-label">About Us</p>
-              <h2>Roofing done right the first time</h2>
-              <p>
-                We help homeowners and businesses protect what matters most with
-                dependable roofing services and a commitment to quality. Whether
-                you need repairs after a storm, ongoing maintenance, or a full
-                replacement, we bring professionalism and pride to every project.
-              </p>
-              <p>
-                Our goal is simple: deliver clean, lasting work and make the
-                process easy for every customer.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal x={40} delay={0.1}>
-            <div className="about-panel">
+      <Section {...aboutSection}>
+        <div className="about-panel">
               <div className="stat-card">
                 <span className="stat-number">10+</span>
                 <span className="stat-label">
@@ -131,9 +112,7 @@ export default function HomePage() {
                 </span>
               </div>
             </div>
-          </ScrollReveal>
-        </div>
-      </section>
+      </Section>
       <Section {...steepRoofSection}>
         <ContentCards items={steepRoofContentCards} elevated style={{ "--columns": 4, "--padding": 0, "--alignment": "center"} as React.CSSProperties}/>
       </Section>

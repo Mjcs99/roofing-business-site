@@ -28,7 +28,7 @@ export default function Section({
   light = false,
 }: SectionProps) {
   const content = (
-    <>
+    <div className={className}>
       {(label || title || description) && (
         <div className={styles.header}>
           {label && <p className={styles.label}>{label}</p>}
@@ -38,13 +38,13 @@ export default function Section({
       )}
 
       {children}
-    </>
+    </div>
   );
 
   return (
     <section
       id={id}
-      className={`${styles.section} ${light ? styles.light : ""} ${className ?? ""}`}
+      className={`${styles.section} ${light ? styles.light : ""}`}
     >
       <div className={styles.container}>
         {reveal ? (

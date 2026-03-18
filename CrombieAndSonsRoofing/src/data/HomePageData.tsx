@@ -27,7 +27,7 @@ import safetyHeroImage from "/safety-roofing.png"
 
 export const safetyHero = {
   className: "safety-hero",
-  
+
   eyebrow: "Our Commitment to Safety",
 
   title: "Safety comes first on every project",
@@ -112,3 +112,13 @@ export const seeOurWorkSection ={
   description: "Browse recent roofing and exterior projects completed with care, quality workmanship, and attention to detail.",
   reveal: true
 }
+
+export const aboutSection = {
+  reveal: true,
+  className: "about-grid",
+  label: "About Us",
+  title: "Roofing done right the first time",
+  description: "We help homeowners and businesses protect what matters most with dependable roofing services and a commitment to quality. Whether you need repairs after a storm, ongoing maintenance, or a full replacement, we bring professionalism and pride to every project."
+
+}
+
