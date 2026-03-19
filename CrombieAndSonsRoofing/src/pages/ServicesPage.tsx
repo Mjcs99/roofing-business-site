@@ -309,8 +309,6 @@ export default function ServicesPage() {
             <div className="financing-actions">
               <a
                 href="/coming-soon"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="btn btn-primary"
               >
                 Apply For Financing
