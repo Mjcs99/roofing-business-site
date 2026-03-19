@@ -15,10 +15,10 @@ import PageHero from "../components/layout/PageHero";
 import Section from "../components/layout/Section";
 
 
-import img from "../assets/svg/badges/trusted-quality.svg"
-import reliable from "../assets/svg/badges/weather-tested.svg"
-import last from "../assets/svg/badges/built-to-last.svg"
-import storm from "../assets/svg/badges/storm-ready.svg"
+import trustedQuality from "../assets/svg/badges/trusted-quality.svg"
+import weatherTested from "../assets/svg/badges/weather-tested.svg"
+import builtToLast from "../assets/svg/badges/built-to-last.svg"
+import stormReady from "../assets/svg/badges/storm-ready.svg"
 export default function HomePage() {
     const galleryImages = [
         {
@@ -120,19 +120,22 @@ export default function HomePage() {
               </div>
             </div>
         <div>
-          <img src={img} alt="Trusted & Proven Badge" />
-          <img src={storm} alt="Trusted & Proven Badge" /> 
-          <img src={reliable} alt="Trusted & Proven Badge" /> 
-          <img src={last} alt="Trusted & Proven Badge" /> 
+          <img src={trustedQuality} alt="Trusted quality workmanship badge" />
+
+          <img src={stormReady} alt="Storm-ready roofing for harsh weather conditions" />
+
+          <img src={weatherTested} alt="Weather-tested roofing built for durability" />
+
+          <img src={builtToLast} alt="Built-to-last roofing and long-term protection" />
         </div>
         <div className="about-note">
-  <h3>What you can expect</h3>
-  <ul>
-    <li>Clear estimates and honest recommendations</li>
-    <li>Reliable scheduling and clean job sites</li>
-    <li>Work built for Alberta weather</li>
-  </ul>
-</div>
+          <h3>What you can expect</h3>
+          <ul>
+            <li>Clear estimates and honest recommendations</li>
+            <li>Reliable scheduling and clean job sites</li>
+            <li>Work built for Alberta weather</li>
+          </ul>
+        </div>
       </Section>
       <Section {...steepRoofSection}>
         <ContentCards items={steepRoofContentCards} elevated style={{ "--columns": 4, "--padding": 0, "--alignment": "center"} as React.CSSProperties}/>
