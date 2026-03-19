@@ -78,6 +78,16 @@ a {
   background: linear-gradient(to right, transparent, #d1d5db, transparent);
   margin: 1.5rem 0;
 }
+
+.about-badges {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  justify-items: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
 .about-note {
   padding: 1.25rem;
   border-radius: 16px;
@@ -272,6 +282,9 @@ a {
   .about-grid {
     grid-template-columns: 1fr 1fr;
   }
+  .about-badges{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 900px) {
@@ -280,10 +293,13 @@ a {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .trust-grid,
-  .about-grid {
+  .about-grid{
     grid-template-columns: 1fr;
+  }
+  .about-badges{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

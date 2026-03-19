@@ -119,7 +119,7 @@ export default function HomePage() {
                 </span>
               </div>
             </div>
-        <div>
+        <div className="about-badges">
           <img src={trustedQuality} alt="Trusted quality workmanship badge" />
 
           <img src={stormReady} alt="Storm-ready roofing for harsh weather conditions" />
