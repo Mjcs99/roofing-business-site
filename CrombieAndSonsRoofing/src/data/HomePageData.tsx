@@ -118,7 +118,19 @@ export const aboutSection = {
   className: "about-grid",
   label: "About Us",
   title: "Roofing done right the first time",
-  description: "We help homeowners and businesses protect what matters most with dependable roofing services and a commitment to quality. Whether you need repairs after a storm, ongoing maintenance, or a full replacement, we bring professionalism and pride to every project."
+  description: (
+  <>
+    <p>
+      We help homeowners and businesses protect what matters most with dependable roofing services built for Alberta conditions. From small repairs to full roof replacements, every project is handled with care, attention to detail, and a commitment to doing the job right the first time.
+    </p>
+
+    <div className="section-divider" />
+
+    <p>
+      Whether you're dealing with storm damage, aging materials, or planning ahead, we provide clear communication, honest recommendations, and work you can rely on long after the job is done. Our focus is simple — durable results, professional service, and roofs that hold up when it matters most.
+    </p>
+  </>
+)
 
 }
 

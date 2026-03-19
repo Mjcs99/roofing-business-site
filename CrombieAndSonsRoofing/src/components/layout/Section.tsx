@@ -5,7 +5,7 @@ import styles from "./Section.module.css";
 type SectionProps = {
   label?: string;
   title?: string;
-  description?: string;
+  description?: React.ReactNode;
   children?: React.ReactNode;
   id?: string;
   className?: string;
