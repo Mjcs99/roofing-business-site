@@ -20,7 +20,7 @@ export default function ContentCards({ items, className, elevated = false, style
   return (
     <div className={`${styles.grid} ${className ?? ""}`} style={style}>
       {items.map((item, index) => (
-        <article key={index} className={`${styles.card} ${item.featured ? styles.featured : ""} ${elevated ? styles.elevated : ""}`}>
+        <article key={index} className={`card ${styles.card} ${item.featured ? styles.featured : ""} ${elevated ? styles.elevated : ""}`}>
           {item.image && (
             <img src={item.image} alt={item.alt ?? ""} className={styles.image} />
           )}

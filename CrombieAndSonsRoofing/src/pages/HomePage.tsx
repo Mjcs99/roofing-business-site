@@ -1,6 +1,6 @@
 import "./HomePage.css";
 import { useState } from "react";
-import { aboutSection, badges, badgeUpAnimation, beforeAfterContentCards, beforeAfterSection, galleryImages, homeContentCards, homeHero, homepageServicesSection, safetyHero, seeOurWorkSection, steepRoofContentCards, steepRoofSection } from "../data/HomePageData";
+import { aboutSection, badges, badgeUpAnimation, beforeAfterContentCards, beforeAfterSection, galleryImages, homeContentCards, homeHero, homepageServicesSection, homeTrustCards, safetyHero, seeOurWorkSection, steepRoofContentCards, steepRoofSection } from "../data/HomePageData";
 import ContentCards from "../components/layout/ContentCards";
 import PageHero from "../components/layout/PageHero";
 import Section from "../components/layout/Section";
@@ -32,37 +32,7 @@ export default function HomePage() {
     <main className="home-page">
       <PageHero {...homeHero} />
       <section className="trust-bar">
-        <div className="container trust-grid">
-          <ScrollReveal y={30} delay={0.05}>
-            <div className="trust-card">
-              <h3>Experienced Team</h3>
-              <p>
-                Professional roofing work backed by skill, care, and attention to
-                detail.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal y={30} delay={0.15}>
-            <div className="trust-card">
-              <h3>High-Quality Materials</h3>
-              <p>
-                We use dependable materials designed for long-term protection and
-                performance.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal y={30} delay={0.25}>
-            <div className="trust-card">
-              <h3>Honest Service</h3>
-              <p>
-                Clear communication, fair pricing, and no surprises from start to
-                finish.
-              </p>
-            </div>
-          </ScrollReveal>
-        </div>
+        <ContentCards {...homeTrustCards}/>
       </section>
       <Section {...aboutSection}>
         <div className="about-panel">
@@ -79,7 +49,7 @@ export default function HomePage() {
                   Commitment to <strong>Customer Satisfaction</strong>
                 </span>
               </div>
-            </div>
+          </div>
         <div className="about-badges">
           {badges.map((badge, i) => (
             <ScrollReveal key={i} {...badgeUpAnimation} delay={0.1 * (i + 1)}>

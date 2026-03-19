@@ -153,6 +153,7 @@ import galleryThree from "../assets/homepage_photos/gallery/gallery-3.jpg";
 import galleryFour from "../assets/homepage_photos/gallery/gallery-4.jpg";
 import galleryFive from "../assets/homepage_photos/gallery/gallery-5.jpg";
 import gallerySix from "../assets/homepage_photos/gallery/gallery-6.png";
+import { MdDescription } from "react-icons/md";
 
 export const galleryImages = [
         {
@@ -180,3 +181,25 @@ export const galleryImages = [
         alt: "Residential exterior and roofing project",
         },
     ];
+
+export const homeTrustCards = {
+  className: "trust-card",
+  style: { "--columns": 3 } as React.CSSProperties,
+  items: [
+  {
+    title: "Experienced Team",
+    description:
+      "Professional roofing work backed by skill, care, and attention to detail.",
+  },
+  {
+    title: "High-Quality Materials",
+    description:
+      "We use dependable materials designed for long-term protection and performance.",
+  },
+  {
+    title: "Honest Service",
+    description:
+      "Clear communication, fair pricing, and no surprises from start to finish.",
+  }]
+};
+
