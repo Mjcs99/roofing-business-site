@@ -80,10 +80,16 @@ export const steepRoofContentCards = [
 import beforeRoof from "../assets/before-roof-repair.jpg";
 import afterRoof from "../assets/after-roof-repair.jpg";
 
-export const beforeAfterContentCards = [
-  {title: "Before roof replacement", description: "Aging shingles and visible wear that reduced both the roof's performance and the home's curb appeal.", image: beforeRoof},
-  {title: "After roof replacement", description: "A brand new roofing system installed with quality materials and professional workmanship for long-term protection.", image: afterRoof}
-];
+export const beforeAfterContentCards = 
+  { 
+    style: {"--columns": 2} as React.CSSProperties,
+    className: "before-after-cards",
+    items: 
+    [
+      {title: "Before roof replacement", description: "Aging shingles and visible wear that reduced both the roof's performance and the home's curb appeal.", image: beforeRoof},
+      {title: "After roof replacement", description: "A brand new roofing system installed with quality materials and professional workmanship for long-term protection.", image: afterRoof}
+    ]
+};
 
 export const steepRoofSection = {
   className: "steep-roof-section",
@@ -153,7 +159,6 @@ import galleryThree from "../assets/homepage_photos/gallery/gallery-3.jpg";
 import galleryFour from "../assets/homepage_photos/gallery/gallery-4.jpg";
 import galleryFive from "../assets/homepage_photos/gallery/gallery-5.jpg";
 import gallerySix from "../assets/homepage_photos/gallery/gallery-6.png";
-import { MdDescription } from "react-icons/md";
 
 export const galleryImages = [
         {

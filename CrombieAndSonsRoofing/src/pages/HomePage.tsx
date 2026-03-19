@@ -97,7 +97,7 @@ export default function HomePage() {
         <ContentCards items={homeContentCards} style={{ margin: "0 2rem" }}/>
       </Section>
       <Section {...beforeAfterSection}>
-        <ContentCards items={beforeAfterContentCards} className="before-after-cards" style={{"--columns": 2} as React.CSSProperties}/>
+        <ContentCards {...beforeAfterContentCards}/>
       </Section>
       <Section {...seeOurWorkSection}>
         <div className="photo-gallery-grid">
