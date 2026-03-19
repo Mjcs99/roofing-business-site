@@ -88,6 +88,18 @@ a {
   width: 100%;
 }
 
+.about-panel {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.about-side {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
 .about-note {
   padding: 1.25rem;
   border-radius: 16px;
@@ -126,8 +138,9 @@ a {
   display: grid;
   grid-template-columns: 1.3fr 0.9fr;
   gap: 2rem;
-  align-items: stretch;
+  align-items: start;
 }
+
 .about-grid :global(div[class*="header"]) {
   align-items: flex-start;
   text-align: left;
