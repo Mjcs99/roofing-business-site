@@ -1,51 +1,14 @@
-import ScrollReveal from "../components/animations/ScrollReveal";
-import Footer from "../components/layout/Footer";
 import "./HomePage.css";
 import { useState } from "react";
-
-import galleryOne from "../assets/homepage_photos/gallery/gallery-1.png";
-import galleryTwo from "../assets/homepage_photos/gallery/gallery-2.jpg"
-import galleryThree from "../assets/homepage_photos/gallery/gallery-3.jpg";
-import galleryFour from "../assets/homepage_photos/gallery/gallery-4.jpg";
-import galleryFive from "../assets/homepage_photos/gallery/gallery-5.jpg";
-import gallerySix from "../assets/homepage_photos/gallery/gallery-6.png";
-import { aboutSection, beforeAfterContentCards, beforeAfterSection, homeContentCards, homeHero, homepageServicesSection, safetyHero, seeOurWorkSection, steepRoofContentCards, steepRoofSection } from "../data/HomePageData";
+import { aboutSection, badges, badgeUpAnimation, beforeAfterContentCards, beforeAfterSection, galleryImages, homeContentCards, homeHero, homepageServicesSection, safetyHero, seeOurWorkSection, steepRoofContentCards, steepRoofSection } from "../data/HomePageData";
 import ContentCards from "../components/layout/ContentCards";
 import PageHero from "../components/layout/PageHero";
 import Section from "../components/layout/Section";
+import ScrollReveal from "../components/animations/ScrollReveal";
+import Footer from "../components/layout/Footer";
 
-
-import trustedQuality from "../assets/svg/badges/trusted-quality.svg"
-import weatherTested from "../assets/svg/badges/weather-tested.svg"
-import builtToLast from "../assets/svg/badges/built-to-last.svg"
-import stormReady from "../assets/svg/badges/storm-ready.svg"
 export default function HomePage() {
-    const galleryImages = [
-        {
-        src: galleryOne,
-        alt: "Completed residential roofing project",
-        },
-        {
-        src: galleryTwo,
-        alt: "Roof replacement project in progress",
-        },
-        {
-        src: galleryThree,
-        alt: "Steep roof project with new shingles installed",
-        },
-        {
-        src: galleryFour,
-        alt: "Professional roofing crew working on a home",
-        },
-        {
-        src: galleryFive,
-        alt: "Finished roof installation with clean lines",
-        },
-        {
-        src: gallerySix,
-        alt: "Residential exterior and roofing project",
-        },
-    ];
+    
     const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
     const openImage = (index: number) => setSelectedImage(index);
@@ -102,9 +65,7 @@ export default function HomePage() {
         </div>
       </section>
       <Section {...aboutSection}>
-        
         <div className="about-panel">
-          
               <div className="stat-card">
                 <span className="stat-number">10+</span>
                 <span className="stat-label">
@@ -120,13 +81,11 @@ export default function HomePage() {
               </div>
             </div>
         <div className="about-badges">
-          <img src={trustedQuality} alt="Trusted quality workmanship badge" />
-
-          <img src={stormReady} alt="Storm-ready roofing for harsh weather conditions" />
-
-          <img src={weatherTested} alt="Weather-tested roofing built for durability" />
-
-          <img src={builtToLast} alt="Built-to-last roofing and long-term protection" />
+          {badges.map((badge, i) => (
+            <ScrollReveal key={i} {...badgeUpAnimation} delay={0.1 * (i + 1)}>
+              <img src={badge.src} alt={badge.alt}/>
+            </ScrollReveal>
+          ))}
         </div>
         <div className="about-note">
           <h3>What you can expect</h3>

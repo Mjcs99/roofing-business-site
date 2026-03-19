@@ -119,18 +119,64 @@ export const aboutSection = {
   label: "About Us",
   title: "Roofing done right the first time",
   description: (
-  <>
-    <p>
-      We help homeowners and businesses protect what matters most with dependable roofing services built for Alberta conditions. From small repairs to full roof replacements, every project is handled with care, attention to detail, and a commitment to doing the job right the first time.
-    </p>
+    <>
+      <p>
+        We help homeowners and businesses protect what matters most with dependable roofing services built for Alberta conditions. From small repairs to full roof replacements, every project is handled with care, attention to detail, and a commitment to doing the job right the first time.
+      </p>
 
-    <div className="section-divider" />
+      <div className="section-divider" />
 
-    <p>
-      Whether you're dealing with storm damage, aging materials, or planning ahead, we provide clear communication, honest recommendations, and work you can rely on long after the job is done. Our focus is simple — durable results, professional service, and roofs that hold up when it matters most.
-    </p>
-  </>
-)
-
+      <p>
+        Whether you're dealing with storm damage, aging materials, or planning ahead, we provide clear communication, honest recommendations, and work you can rely on long after the job is done. Our focus is simple — durable results, professional service, and roofs that hold up when it matters most.
+      </p>
+    </>
+  )
 }
 
+export const badgeUpAnimation = {y: 40, x: 0}
+
+import trustedQuality from "../assets/svg/badges/trusted-quality.svg"
+import weatherTested from "../assets/svg/badges/weather-tested.svg"
+import builtToLast from "../assets/svg/badges/built-to-last.svg"
+import stormReady from "../assets/svg/badges/storm-ready.svg"
+
+export const badges = [
+  { src: trustedQuality, alt: "Trusted quality workmanship badge" },
+  { src: stormReady, alt: "Storm-ready roofing for harsh weather conditions" },
+  { src: weatherTested, alt: "Weather-tested roofing built for durability" },
+  { src: builtToLast, alt: "Built-to-last roofing and long-term protection" },
+];
+
+import galleryOne from "../assets/homepage_photos/gallery/gallery-1.png";
+import galleryTwo from "../assets/homepage_photos/gallery/gallery-2.jpg"
+import galleryThree from "../assets/homepage_photos/gallery/gallery-3.jpg";
+import galleryFour from "../assets/homepage_photos/gallery/gallery-4.jpg";
+import galleryFive from "../assets/homepage_photos/gallery/gallery-5.jpg";
+import gallerySix from "../assets/homepage_photos/gallery/gallery-6.png";
+
+export const galleryImages = [
+        {
+        src: galleryOne,
+        alt: "Completed residential roofing project",
+        },
+        {
+        src: galleryTwo,
+        alt: "Roof replacement project in progress",
+        },
+        {
+        src: galleryThree,
+        alt: "Steep roof project with new shingles installed",
+        },
+        {
+        src: galleryFour,
+        alt: "Professional roofing crew working on a home",
+        },
+        {
+        src: galleryFive,
+        alt: "Finished roof installation with clean lines",
+        },
+        {
+        src: gallerySix,
+        alt: "Residential exterior and roofing project",
+        },
+    ];
