@@ -69,6 +69,7 @@ a {
 
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
 .trust-cards .card:hover {
   transform: translateY(-4px);
   box-shadow:
@@ -378,6 +379,9 @@ a {
 }
 
 @media (max-width: 768px) {
+  .trust-bar {
+    margin-top: 0px;
+  }
   .about-grid{
     grid-template-columns: 1fr;
   }
