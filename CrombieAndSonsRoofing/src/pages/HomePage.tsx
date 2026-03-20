@@ -36,7 +36,6 @@ export default function HomePage() {
       <section className="trust-bar">
         <ContentCards {...homeTrustCards} />
       </section>
-
       <Section {...aboutSection}>
         <ContentCards {...homeStatCards} />
 
