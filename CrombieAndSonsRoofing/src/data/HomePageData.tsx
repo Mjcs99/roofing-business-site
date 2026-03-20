@@ -194,7 +194,7 @@ export const galleryImages = [
     ];
 
 export const homeTrustCards = {
-  className: "trust-card",
+  className: "trust-cards",
   style: { "--columns": 3 } as React.CSSProperties,
   items: [
   {
