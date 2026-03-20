@@ -70,12 +70,18 @@ import steepRoofOne from "../assets/homepage_photos/steep-roof-1.webp"
 import steepRoofTwo from "../assets/homepage_photos/steep-roof-2.webp"
 import carefulInstallation from "../assets/roofing-services.webp"
 
-export const steepRoofContentCards = [
-  {title: "Experienced with steep residential roof pitches", image: steepRoofOne},
-  {title: "Proper safety equipment and work practices", image: safetyHeroImage},
-  {title: "Careful installation on difficult roof sections", image: carefulInstallation},
-  {title: "Clean, precise workmanship on challenging projects", image: steepRoofTwo}
-]
+export const steepRoofContentCards = {
+  items: [
+    {title: "Experienced with steep residential roof pitches", image: steepRoofOne},
+    {title: "Proper safety equipment and work practices", image: safetyHeroImage},
+    {title: "Careful installation on difficult roof sections", image: carefulInstallation},
+    {title: "Clean, precise workmanship on challenging projects", image: steepRoofTwo}
+    ],
+  style: {
+          "--columns": 4,
+          "--padding": 0,
+          "--alignment": "center", } as React.CSSProperties
+}
 
 import beforeRoof from "../assets/before-roof-repair.jpg";
 import afterRoof from "../assets/after-roof-repair.jpg";
@@ -208,3 +214,11 @@ export const homeTrustCards = {
   }]
 };
 
+export const homeStatCards = {
+  items: [
+    {title: "10+ Years of Experience", description: "serving Red Deer & surrounding areas"},
+    {title: "100%", description :"Commitment to Customer Satisfaction"}
+  ],
+  className: "stat-card",
+  style: { "--columns": 1 } as React.CSSProperties,
+}

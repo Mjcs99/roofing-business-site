@@ -10,6 +10,7 @@ import {
   homeContentCards,
   homeHero,
   homepageServicesSection,
+  homeStatCards,
   homeTrustCards,
   safetyHero,
   seeOurWorkSection,
@@ -42,23 +43,8 @@ export default function HomePage() {
       </section>
 
       <Section {...aboutSection}>
-        <div className="about-panel">
-          <div className="stat-card">
-            <span className="stat-number">10+</span>
-            <span className="stat-label">
-              Years of Experience <br />
-              <strong>serving Red Deer & surrounding areas</strong>
-            </span>
-          </div>
-
-          <div className="stat-card">
-            <span className="stat-number">100%</span>
-            <span className="stat-label">
-              Commitment to <strong>Customer Satisfaction</strong>
-            </span>
-          </div>
-        </div>
-
+        <ContentCards {...homeStatCards} />
+        
         <div className="about-badges">
           {badges.map((badge, i) => (
             <ScrollReveal
@@ -82,19 +68,8 @@ export default function HomePage() {
       </Section>
 
       <Section {...steepRoofSection}>
-        <ContentCards
-          items={steepRoofContentCards}
-          elevated
-          style={
-            {
-              "--columns": 4,
-              "--padding": 0,
-              "--alignment": "center",
-            } as React.CSSProperties
-          }
-        />
+        <ContentCards {...steepRoofContentCards} elevated/>
       </Section>
-
       <PageHero {...safetyHero}>
         <div className="safety-points">
           <ScrollReveal y={30} delay={0.05}>

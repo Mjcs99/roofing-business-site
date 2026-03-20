@@ -25,7 +25,7 @@ export default function ContentCards({ items, className, elevated = false, style
             <img src={item.image} alt={item.alt ?? ""} className={styles.image} />
           )}
 
-          <div className={styles.content}>
+          <div className={`content ${styles.content}`}>
             <h3>{item.title}</h3>
 
             {item.points && (
