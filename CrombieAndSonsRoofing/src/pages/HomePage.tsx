@@ -27,11 +27,6 @@ import Lightbox from "yet-another-react-lightbox-lite";
 import "yet-another-react-lightbox-lite/styles.css";
 
 export default function HomePage() {
-  const slides = galleryImages.map((image) => ({
-    src: image.src,
-    alt: image.alt,
-  }));
-
   const [selectedImage, setSelectedImage] = useState<number>();
 
   return (
@@ -44,7 +39,7 @@ export default function HomePage() {
 
       <Section {...aboutSection}>
         <ContentCards {...homeStatCards} />
-        
+
         <div className="about-badges">
           {badges.map((badge, i) => (
             <ScrollReveal
@@ -133,7 +128,7 @@ export default function HomePage() {
         </div>
 
         <Lightbox
-          slides={slides}
+          slides={galleryImages}
           index={selectedImage}
           setIndex={setSelectedImage}
         />
