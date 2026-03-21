@@ -31,11 +31,8 @@ export default function HomePage() {
 
   return (
     <main className="home-page">
-      <PageHero {...homeHero} />
-
-      <section className="trust-bar">
-        <ContentCards {...homeTrustCards} />
-      </section>
+      <PageHero {...homeHero}> <ContentCards {...homeTrustCards} /> </PageHero>
+      
       <Section {...aboutSection}>
         <ContentCards {...homeStatCards} />
 

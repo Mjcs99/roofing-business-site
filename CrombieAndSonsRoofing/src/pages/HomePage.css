@@ -42,11 +42,6 @@ a {
   margin: 0 auto;
 }
 
-.trust-bar {
-  margin-top: -150px;
-  position: relative;
-  z-index: 2;
-}
 
 .trust-cards .card {
   width: 100%;
@@ -54,13 +49,9 @@ a {
   min-width: 0;
   padding: 1.5rem;
 
-  background: linear-gradient(
-    180deg,
-    #1e293b,
-    #0f172a
-  );
+  background: transparent;
 
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 5px solid rgba(255, 255, 255, 0.06);
   border-radius: 18px;
 
   box-shadow:
