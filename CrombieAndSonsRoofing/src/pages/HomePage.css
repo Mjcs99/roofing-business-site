@@ -83,7 +83,7 @@ a {
 .trust-cards .content h3::after {
   content: "";
   display: block;
-  width: 36px;
+  width: 200px;
   height: 2px;
   margin-top: 0.55rem;
   border-radius: 999px;
@@ -231,7 +231,7 @@ a {
 .stat-card .content h3::after {
   content: "";
   display: block;
-  width: 50px;
+  width: 250px;
   height: 3px;
   margin-top: 0.5rem;
 
