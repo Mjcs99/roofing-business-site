@@ -4,7 +4,7 @@ type CardItem = {
   featured?: boolean
   image?: string;
   alt?: string;
-  title: string;
+  title?: string;
   description?: string;
   points?: string[];
 };
