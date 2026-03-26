@@ -70,24 +70,44 @@ app.http("contact", {
         content: {
           subject: `New Roofing Lead from ${name}`,
           plainText: `Name: ${name}
-Email: ${email}
-Phone: ${phone || ""}
-Street: ${street}
-City: ${city}
-Province: ${province}
-Postal: ${postal}
-
-Message:
-${message}`,
+                      Email: ${email}
+                      Phone: ${phone || ""}
+                      Street: ${street}
+                      City: ${city}
+                      Province: ${province}
+                      Postal: ${postal}
+                      Message: ${message}`,
         },
         recipients: {
           to: [{ address: notifyAddress }],
         },
       };
 
-      const poller = await client.beginSend(emailMessage);
-      await poller.pollUntilDone();
+      const confirmationEmailMessage = {
+        senderAddress,
+        content: {
+          subject: "Crombie & Sons Roofing – Request Received",
+          plainText: `Hello ${name},
 
+            Thank you for contacting Crombie & Sons Roofing.
+
+            We have received your request and will review the details shortly. A member of our team will be in touch with you as soon as possible to discuss your project and next steps.
+
+            If your request is urgent, please feel free to reply to this email or contact us directly.
+
+            We appreciate the opportunity to assist you.
+
+            Crombie & Sons Roofing`,
+        },
+        recipients: {
+          to: [{ address: email }],
+        },
+      };
+
+      const notifyPoller = await client.beginSend(emailMessage);
+      await notifyPoller.pollUntilDone();
+      const confirmationPoller = await client.beginSend(confirmationEmailMessage);
+      await confirmationPoller.pollUntilDone();
       return {
         status: 200,
         jsonBody: { ok: true },
