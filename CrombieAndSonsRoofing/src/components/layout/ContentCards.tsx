@@ -14,9 +14,10 @@ type Props = {
   className?: string;
   elevated?: boolean;
   style?: React.CSSProperties;
+  children?: React.ReactNode;
 };
 
-export default function ContentCards({ items, className, elevated = false, style }: Props) {
+export default function ContentCards({ items, className, elevated = false, style, children}: Props) {
   return (
     <div className={`${styles.grid} ${className ?? ""}`} style={style}>
       {items.map((item, index) => (
@@ -38,8 +39,10 @@ export default function ContentCards({ items, className, elevated = false, style
 
             <p>{item.description}</p>
           </div>
+          {children}
         </article>
       ))}
+      
     </div>
   );
 }

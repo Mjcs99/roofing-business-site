@@ -3,9 +3,18 @@
 }
 
 .financing-highlight {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.financing-highlight .card {
+  box-sizing: border-box;
   margin-top: 2rem;
-  max-width: 520px;
-  padding: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+  min-width: 170px;
+  padding: clamp(1rem, 3vw, 1.5rem);
   border-radius: 24px;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -14,30 +23,38 @@
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
 }
 
-.financing-highlight-label {
-  display: inline-block;
-  margin-bottom: 0.75rem;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #f1c27a;
-}
-
-.financing-highlight h3 {
+.financing-highlight .card::before {
+  content: "Example Payment:";
+  display: block;
   margin: 0 0 0.75rem;
-  font-size: clamp(1.35rem, 3vw, 2rem);
-  line-height: 1.15;
-  color: var(--white);
+  line-height: 1.2;
+  color: rgba(194, 145, 41, 0.904);
+  font-size: clamp(1.1rem, 4vw, 2rem);
+  font-weight: 700;
 }
 
-.financing-highlight p {
+.financing-highlight .card .content {
+  min-width: 0;
+}
+
+.financing-highlight .card .content h3 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.1rem, 4vw, 2rem);
+  line-height: 1.2;
+  color: var(--white);
+  overflow-wrap: normal;
+}
+
+.financing-highlight .card .content p {
   margin: 0;
   color: rgba(255, 255, 255, 0.88);
-  line-height: 1.7;
+  line-height: 1.6;
+  font-size: clamp(0.95rem, 2.5vw, 1rem);
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
-.financing-disclaimer {
+.financing-highlight .card span {
   display: block;
   margin-top: 1rem;
   font-size: 0.82rem;
@@ -45,10 +62,121 @@
 }
 
 .finance-steps-grid,
-.finance-faq-grid {
+.finance-faq-grid,
+.financing-benefits-grid {
+  counter-reset: step;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1.25rem;
+  align-items: stretch;
+}
+
+.finance-steps-grid .card,
+.financing-benefits-grid .card {
+  position: relative;
+  height: 100%;
+}
+
+.finance-steps-grid .card {
+  counter-increment: step;
+}
+
+.finance-steps-grid .card::before {
+  content: counter(step);
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.financing-benefits-grid .card {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  display: flex;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.financing-benefits-grid .card::before {
+  content: none;
+}
+
+.finance-faq-grid .card::before{
+  content: "";
+}
+
+.financing-benefits-grid .card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(201, 139, 46, 0.25),
+    transparent
+  );
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.25;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.financing-benefits-grid .card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.financing-benefits-grid .card:hover::after {
+  opacity: 0.5;
+}
+
+.financing-benefits-grid .card .content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.25rem;
+  text-align: center;
+  min-width: 0;
+}
+
+.financing-benefits-grid .card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 0.4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.financing-benefits-grid .card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #374151;
+  font-weight: 600;
+  letter-spacing: 0.15px;
+
+  position: relative;
+  z-index: 1;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .finance-step-card,
@@ -84,13 +212,6 @@
   margin: 0;
   color: var(--muted);
   line-height: 1.7;
-}
-
-.financing-benefits-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 2rem;
-  align-items: start;
 }
 
 .financing-benefits-card {
@@ -139,14 +260,19 @@
   gap: 1rem;
 }
 
+#about,
+#services,
+#gallery,
+#contact,
+#how-it-works {
+  scroll-margin-top: 100px;
+}
+
 @media (max-width: 1000px) {
   .finance-steps-grid,
-  .finance-faq-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
+  .finance-faq-grid,
   .financing-benefits-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .financing-cta-box {
@@ -165,8 +291,14 @@
   }
 
   .finance-steps-grid,
-  .finance-faq-grid {
+  .finance-faq-grid,
+  .financing-benefits-grid {
     grid-template-columns: 1fr;
+  }
+
+  .financing-benefits-grid .card {
+    aspect-ratio: auto;
+    min-height: 220px;
   }
 
   .financing-highlight,
@@ -174,10 +306,24 @@
     padding: 1.25rem;
   }
 }
-#about,
-#services,
-#gallery,
-#contact,
-#how-it-works {
-  scroll-margin-top: 100px;
+
+@media (max-width: 480px) {
+  .financing-highlight .card {
+    padding: 1rem;
+    border-radius: 18px;
+  }
+
+  .financing-highlight .card .content h3 {
+    line-height: 1.15;
+  }
+
+  .financing-highlight .card .content p {
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 250px) {
+  .financing-highlight .card {
+    display: none;
+  }
 }
