@@ -74,6 +74,7 @@ export const howItWorksContentCards = {
 };
 
 export const financingBenefitsSection = {
+  reveal: true,
   label: "Why Homeowners Use Financing",
   title: "More flexibility, less delay",
   description:
@@ -106,6 +107,7 @@ export const financingBenefitsContentCards = {
 };
 
 export const financingFaqSection = {
+  reveal: true,
   label: "Frequently Asked Questions",
   title: "Common financing questions",
 }
