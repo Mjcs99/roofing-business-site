@@ -25,112 +25,116 @@ import Footer from "../components/layout/Footer";
 
 import Lightbox from "yet-another-react-lightbox-lite";
 import "yet-another-react-lightbox-lite/styles.css";
+import SEO from "../components/layout/SEO";
 
 export default function HomePage() {
   const [selectedImage, setSelectedImage] = useState<number>();
 
   return (
-    <main className="home-page">
-      <PageHero {...homeHero}> <ContentCards {...homeTrustCards} /> </PageHero>
-      
-      <Section {...aboutSection}>
-        <ContentCards {...homeStatCards} />
+    <>
+      <SEO title="Roofing Company in Red Deer | Crombie & Sons Roofing" description="Trusted roofing company in Calgary offering roof repair, replacement, and exterior services. Quality workmanship, fast response, and financing options available." />
+      <main className="home-page">
+        <PageHero {...homeHero}> <ContentCards {...homeTrustCards} /> </PageHero>
+        
+        <Section {...aboutSection}>
+          <ContentCards {...homeStatCards} />
 
-        <div className="about-badges">
-          {badges.map((badge, i) => (
-            <ScrollReveal
-              key={i}
-              {...badgeUpAnimation}
-              delay={0.1 * (i + 1)}
-            >
-              <img src={badge.src} alt={badge.alt} />
+          <div className="about-badges">
+            {badges.map((badge, i) => (
+              <ScrollReveal
+                key={i}
+                {...badgeUpAnimation}
+                delay={0.1 * (i + 1)}
+              >
+                <img src={badge.src} alt={badge.alt} />
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <div className="about-note">
+            <h3>What you can expect</h3>
+            <ul>
+              <li>Clear estimates and honest recommendations</li>
+              <li>Reliable scheduling and clean job sites</li>
+              <li>Work built for Alberta weather</li>
+            </ul>
+          </div>
+        </Section>
+
+        <Section {...steepRoofSection}>
+          <ContentCards {...steepRoofContentCards} elevated/>
+        </Section>
+        <PageHero {...safetyHero}>
+          <div className="safety-points">
+            <ScrollReveal y={30} delay={0.05}>
+              <div className="safety-point">
+                <h3>Careful Job Site Practices</h3>
+                <p>Organized work areas and disciplined site procedures.</p>
+              </div>
             </ScrollReveal>
-          ))}
-        </div>
 
-        <div className="about-note">
-          <h3>What you can expect</h3>
-          <ul>
-            <li>Clear estimates and honest recommendations</li>
-            <li>Reliable scheduling and clean job sites</li>
-            <li>Work built for Alberta weather</li>
-          </ul>
-        </div>
-      </Section>
+            <ScrollReveal y={30} delay={0.1}>
+              <div className="safety-point">
+                <h3>Protection for Your Property</h3>
+                <p>
+                  We work carefully around landscaping, siding, and surrounding
+                  areas.
+                </p>
+              </div>
+            </ScrollReveal>
 
-      <Section {...steepRoofSection}>
-        <ContentCards {...steepRoofContentCards} elevated/>
-      </Section>
-      <PageHero {...safetyHero}>
-        <div className="safety-points">
-          <ScrollReveal y={30} delay={0.05}>
-            <div className="safety-point">
-              <h3>Careful Job Site Practices</h3>
-              <p>Organized work areas and disciplined site procedures.</p>
-            </div>
-          </ScrollReveal>
+            <ScrollReveal y={30} delay={0.15}>
+              <div className="safety-point">
+                <h3>Professional Workmanship</h3>
+                <p>
+                  Our team approaches every project responsibly and with attention
+                  to detail.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </PageHero>
 
-          <ScrollReveal y={30} delay={0.1}>
-            <div className="safety-point">
-              <h3>Protection for Your Property</h3>
-              <p>
-                We work carefully around landscaping, siding, and surrounding
-                areas.
-              </p>
-            </div>
-          </ScrollReveal>
+        <Section {...homepageServicesSection}>
+          <ContentCards
+            items={homeContentCards}
+            style={{ margin: "0 2rem" }}
+          />
+        </Section>
 
-          <ScrollReveal y={30} delay={0.15}>
-            <div className="safety-point">
-              <h3>Professional Workmanship</h3>
-              <p>
-                Our team approaches every project responsibly and with attention
-                to detail.
-              </p>
-            </div>
-          </ScrollReveal>
-        </div>
-      </PageHero>
+        <Section {...beforeAfterSection}>
+          <ContentCards {...beforeAfterContentCards} />
+        </Section>
 
-      <Section {...homepageServicesSection}>
-        <ContentCards
-          items={homeContentCards}
-          style={{ margin: "0 2rem" }}
-        />
-      </Section>
+        <Section {...seeOurWorkSection}>
+          <div className="photo-gallery-grid">
+            {galleryImages.map((image, index) => (
+              <button
+                key={index}
+                type="button"
+                className="photo-gallery-item"
+                onClick={() => setSelectedImage(index)}
+                aria-label={`Open gallery image ${index + 1}`}
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="photo-gallery-image"
+                  loading="lazy"
+                />
+              </button>
+            ))}
+          </div>
 
-      <Section {...beforeAfterSection}>
-        <ContentCards {...beforeAfterContentCards} />
-      </Section>
+          <Lightbox
+            slides={galleryImages}
+            index={selectedImage}
+            setIndex={setSelectedImage}
+          />
+        </Section>
 
-      <Section {...seeOurWorkSection}>
-        <div className="photo-gallery-grid">
-          {galleryImages.map((image, index) => (
-            <button
-              key={index}
-              type="button"
-              className="photo-gallery-item"
-              onClick={() => setSelectedImage(index)}
-              aria-label={`Open gallery image ${index + 1}`}
-            >
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="photo-gallery-image"
-                loading="lazy"
-              />
-            </button>
-          ))}
-        </div>
-
-        <Lightbox
-          slides={galleryImages}
-          index={selectedImage}
-          setIndex={setSelectedImage}
-        />
-      </Section>
-
-      <Footer />
-    </main>
+        <Footer />
+      </main>
+    </>
   );
 }
